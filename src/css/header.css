@@ -1,6 +1,8 @@
 .cabecalho {
     height: 285px;
-    background: linear-gradient(to right, #08033a , #bcb4ff , #08033a );
+    background-image: url('../img/banner-header.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
 }
