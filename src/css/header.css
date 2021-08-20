@@ -1,0 +1,27 @@
+.cabecalho {
+    height: 285px;
+    background: linear-gradient(to right, #08033a , #bcb4ff , #08033a );
+    display: flex;
+    flex-direction: column;
+}
+
+.header_banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo {
+    border-radius: 4rem;
+}
+
+h2 {
+    font-size: 32px;
+    font-family: var(--fonte-asap);
+}
+
+span {
+    font-family: var(--fonte-asap);
+    color: var(--cor-branco);
+    font-size: 22px;
+}

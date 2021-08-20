@@ -1,0 +1,13 @@
+
+
+:root {
+    --cor-branco : #FFFFFF;
+    --fonte-asap : 'Asap', sans-serif;
+}
+
+
+@media screen and (max-width:991px) {
+    .rede-social {
+        display: none;
+    }
+}

@@ -1,0 +1,29 @@
+
+
+ul {
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    
+}
+
+.navegacao, .rede-social {
+    display: flex;    
+}
+
+
+.navegacao li {
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+
+.rede-social li {
+    margin-right: 8px;
+}
+
+.navegacao li a:hover, .rede-social li a:hover {
+    color: gold;    
+}
