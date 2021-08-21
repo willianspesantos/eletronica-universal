@@ -1,6 +1,11 @@
 
 :root {
     --cor-branco : #FFFFFF;
+    --principal: #263F8c;
+    --secundaria: #1F3B73;
+    --clara: #E4EAF2;
+    --verde-claro: #B8D941;
+    --verde-agua: #E6F2BB;
     --fonte-asap : 'Asap', sans-serif;
 }
 
@@ -9,5 +14,19 @@
 @media screen and (max-width:991px) {
     .rede-social {
         display: none;
+    }
+
+    #caixa-mapa {
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    #caixa-mapa iframe {
+        width: 100%;
+    }
+
+    #rodape {
+        margin: 0 !important;
     }
 }

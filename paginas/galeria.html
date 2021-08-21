@@ -4,44 +4,339 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../src/css/_reset.css" />
+    <link rel="stylesheet" href="../src/css/header.css" />
+    <link rel="stylesheet" href="../src/css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    <title>Galeria -ELETRÔNICA UNIVERSAL</title>
+
+    <title>GALERIA - ELETRÔNICA UNIVERSAL</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Alterna navegação"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#"
-              >Home <span class="sr-only">(Página atual)</span></a
-            >
-            <a class="nav-item nav-link" href="#">Destaques</a>
-            <a class="nav-item nav-link" href="#">Preços</a>
-            <a class="nav-item nav-link disabled" href="#">Desativado</a>
+    <div class="corpo">
+      <header
+        class="
+          cabecalho
+          header_banner
+          d-flex
+          flex-row
+          justify-content-around
+          align-items-center
+        "
+        id="cabecalho"
+      >
+        <h1>
+          <img
+            src="../src/img/logoedit.png"
+            class="rodape-logo"
+            alt="Logotipo eletronica universal"
+          />
+          <img
+            src="../src/img/nome.png"
+            class="rodape-logo"
+            alt="eletronica universal"
+          />
+        </h1>
+        <h2 id="chamada">Nossa Experiência Faz a Diferença</h2>
+        <span>+ de 50 Anos no mercado</span>
+      </header>
+      <main>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Alterna navegação"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-white text-uppercase" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white text-uppercase"
+                  href="orcamento.html"
+                  >Faça seu Orçamento</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white text-uppercase"
+                  href="galeria.html"
+                  >Galeria</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white text-uppercase"
+                  href="contato.html"
+                  >Contato</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white text-uppercase"
+                  href="sobre.html"
+                  >Sobre Nós</a
+                >
+              </li>
+            </ul>
           </div>
+          <div
+            class="d-flex flex-row bd-highlight mt-1 mb-2 align-items-center"
+          >
+            <a
+              class="nav-link text-white"
+              href="https://www.facebook.com/eletronicauniversalguarapuava/"
+              target="_blank"
+            >
+              <img src="../src/img/facebook.png" alt="logo facebook" />
+            </a>
+            <a class="nav-link text-white" href="#">
+              <img src="../src/img/whatsapp.png" alt="logo whatsapp" />
+            </a>
+            <a class="nav-link text-white" href="#">
+              <img src="../src/img/twitter.png" alt="logo twitter" />
+            </a>
+          </div>
+        </nav>
+        <section class="produtos">
+          <div class="row p-3 ">
+            <div class="col-sm-3 mt-3">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top"  style="height: 15rem;" src="../src/img/produtos/antena.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <p class="card-text text-center">Antena Digital</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 mt-3">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top"  style="height: 15rem;" src="../src/img/produtos/arduino.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <p class="card-text text-center">Placa Arduino</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 mt-3">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top" style="height: 15rem;" src="../src/img/produtos/caixa-som.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <p class="card-text text-center">Caixa de Som</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 mt-3">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top"  style="height: 15rem;"  style="height: 15rem;" src="../src/img/produtos/capacitor.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <p class="card-text text-center">Capacitores</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 mt-3">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top"  style="height: 15rem;" src="../src/img/produtos/componente.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <p class="card-text text-center">Componentes em geral</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 mt-3">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top"  style="height: 15rem;" src="../src/img/produtos/controle.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <p class="card-text text-center">controle remoto</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 mt-3">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top"  style="height: 15rem;" src="../src/img/produtos/fita-led.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <p class="card-text text-center">Fita Led</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 mt-3">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top"  style="height: 15rem;" src="../src/img/produtos/fonte.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <p class="card-text text-center">Fontes externas</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 mt-3">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top"  style="height: 15rem;" src="../src/img/produtos/hdmi.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <p class="card-text text-center">Cabo HDMI</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 mt-3">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top"  style="height: 15rem;" src="../src/img/produtos/parabolica.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <p class="card-text text-center">Kit parabólica</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 mt-3">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top"  style="height: 15rem;" src="../src/img/produtos/multimetro.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <p class="card-text text-center">Multimetro</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 mt-3">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top"  style="height: 15rem;" src="../src/img/produtos/nobreak.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <p class="card-text text-center">Nobreak</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 mt-3">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top"  style="height: 15rem;" src="../src/img/produtos/suporte-tv.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <p class="card-text text-center">Suporte TV</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 mt-3">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top"  style="height: 15rem;" src="../src/img/produtos/telefone.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <p class="card-text text-center">Telefone</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 mt-3">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top"  style="height: 15rem;" src="../src/img/produtos/tvbox.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <p class="card-text text-center">Tv Box</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 mt-3">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top"  style="height: 15rem;" src="../src/img/produtos/solda.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <p class="card-text text-center">Kit solda</p>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+        </section>
+      </main>
+      <footer class="rodape">
+        <div
+          class="
+            d-flex
+            justify-content-between
+            align-items-center
+            mt-5
+            p-3
+            bg-dark
+            text-white
+          "
+          id="rodape"
+        >
+          <div>
+            <img
+              src="../src/img/logoedit.png"
+              class="rodape-logo"
+              alt="Logotipo eletronica universal"
+            />
+            <img
+              src="../src/img/nome.png"
+              class="rodape-logo"
+              alt="eletronica universal"
+            />
+          </div>
+
+          <ul
+            class="
+              rodape-social
+              d-flex
+              justify-content-around
+              align-items-center
+            "
+          >
+            <li class="mr-3">
+              <a
+                href="#"
+                class="rodape-social-link rodape-social-link--facebook"
+              >
+                <img src="../src/img/facebook-rodape.png" alt="" />
+              </a>
+            </li>
+            <li class="mr-3">
+              <a
+                href="#"
+                class="rodape-social-link rodape-social-link--twitter"
+              >
+                <img src="../src/img/twitter-rodape.png" alt="" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="rodape-social-link rodape-social-link--Whatsapp"
+              >
+                <img src="../src/img/whatsapp-rodape.png" alt="" />
+              </a>
+            </li>
+          </ul>
+
+          <nav class="rodape-nav">
+            <ul class="d-flex justify-content-around align-items-center">
+              <li class="mr-3">
+                <a href="#" class="text-white text-uppercase">home</a>
+              </li>
+              <li class="mr-3">
+                <a href="#" class="text-white text-uppercase">orçamento</a>
+              </li>
+              <li class="mr-3">
+                <a href="#" class="text-white text-uppercase">galeria</a>
+              </li>
+              <li class="mr-3">
+                <a href="#" class="text-white text-uppercase">contato</a>
+              </li>
+              <li class="mr-3">
+                <a href="#" class="text-white text-uppercase">sobre nós</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-      </nav>
-    </header>
-    <main></main>
-    <footer></footer>
-    <script src="src/script/index.js"></script>
+      </footer>
+    </div>
+    <script src="../src/script/index.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

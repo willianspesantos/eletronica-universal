@@ -17,13 +17,39 @@
     border-radius: 4rem;
 }
 
-h2 {
+#chamada {
     font-size: 32px;
     font-family: var(--fonte-asap);
+    color: var(--verde-claro);
 }
 
 span {
     font-family: var(--fonte-asap);
     color: var(--cor-branco);
     font-size: 22px;
+}
+
+
+@media screen and (max-width:1200px) {
+    #cabecalho {
+        flex-direction: column !important;
+    }
+}
+
+@media screen and (max-width:680px) {
+    #chamada {
+        font-size: 22px;
+        font-family: var(--fonte-asap);
+        color: var(--verde-claro);
+    }
+
+    span {
+        font-family: var(--fonte-asap);
+        color: var(--cor-branco);
+        font-size: 18px;
+    }
+
+    
+    
+            
 }

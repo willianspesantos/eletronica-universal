@@ -1,30 +1,224 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sobre Nós - ELETRÔNICA UNIVERSAL</title>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">horário</a></li>
-                    <li><a href="#">faça aqui seu orçamento</a></li>
-                    <li><a href="#">galeria</a></li>
-                    <li><a href="#">contatos</a></li>
-                    
-                </ul>
-            </nav>
-        </header>
-        <main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../src/css/_reset.css" />
+    <link rel="stylesheet" href="../src/css/header.css" />
+    <link rel="stylesheet" href="../src/css/style.css" />
 
-        </main>
-        <footer>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
 
-        </footer>
-        <script src="src/script/index.js"></script>
-    </body>
+    <title>SOBRE NÓS - ELETRÔNICA UNIVERSAL</title>
+  </head>
+  <body>
+    <div class="corpo">
+      <header
+        class="
+          cabecalho
+          header_banner
+          d-flex
+          flex-row
+          justify-content-around
+          align-items-center
+        "
+        id="cabecalho"
+      >
+        <h1>
+          <img
+            src="../src/img/logoedit.png"
+            class="rodape-logo"
+            alt="Logotipo eletronica universal"
+          />
+          <img
+            src="../src/img/nome.png"
+            class="rodape-logo"
+            alt="eletronica universal"
+          />
+        </h1>
+        <h2 id="chamada">Nossa Experiência Faz a Diferença</h2>
+        <span>+ de 50 Anos no mercado</span>
+      </header>
+      <main>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Alterna navegação"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-white text-uppercase" href="../index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white text-uppercase"
+                  href="orcamento.html"
+                  >Faça seu Orçamento</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white text-uppercase"
+                  href="galeria.html"
+                  >Galeria</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white text-uppercase"
+                  href="contato.html"
+                  >Contato</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white text-uppercase"
+                  href="sobre.html"
+                  >Sobre Nós</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="d-flex flex-row bd-highlight mt-1 mb-2 align-items-center"
+          >
+            <a
+              class="nav-link text-white"
+              href="https://www.facebook.com/eletronicauniversalguarapuava/"
+              target="_blank"
+            >
+              <img src="../src/img/facebook.png" alt="logo facebook" />
+            </a>
+            <a class="nav-link text-white" href="#">
+              <img src="../src/img/whatsapp.png" alt="logo whatsapp" />
+            </a>
+            <a class="nav-link text-white" href="#">
+              <img src="../src/img/twitter.png" alt="logo twitter" />
+            </a>
+          </div>
+        </nav>
+        
+      </main>
+      <footer class="rodape">
+        <div
+          class="
+            d-flex
+            justify-content-between
+            align-items-center
+            mt-5
+            p-3
+            bg-dark
+            text-white
+          "
+          id="rodape"
+        >
+          <div>
+            <img
+              src="../src/img/logoedit.png"
+              class="rodape-logo"
+              alt="Logotipo eletronica universal"
+            />
+            <img
+              src="../src/img/nome.png"
+              class="rodape-logo"
+              alt="eletronica universal"
+            />
+          </div>
+
+          <ul
+            class="
+              rodape-social
+              d-flex
+              justify-content-around
+              align-items-center
+            "
+          >
+            <li class="mr-3">
+              <a
+                href="#"
+                class="rodape-social-link rodape-social-link--facebook"
+              >
+                <img src="../src/img/facebook-rodape.png" alt="" />
+              </a>
+            </li>
+            <li class="mr-3">
+              <a
+                href="#"
+                class="rodape-social-link rodape-social-link--twitter"
+              >
+                <img src="../src/img/twitter-rodape.png" alt="" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="rodape-social-link rodape-social-link--Whatsapp"
+              >
+                <img src="../src/img/whatsapp-rodape.png" alt="" />
+              </a>
+            </li>
+          </ul>
+
+          <nav class="rodape-nav">
+            <ul class="d-flex justify-content-around align-items-center">
+              <li class="mr-3">
+                <a href="#" class="text-white text-uppercase">home</a>
+              </li>
+              <li class="mr-3">
+                <a href="#" class="text-white text-uppercase">orçamento</a>
+              </li>
+              <li class="mr-3">
+                <a href="#" class="text-white text-uppercase">galeria</a>
+              </li>
+              <li class="mr-3">
+                <a href="#" class="text-white text-uppercase">contato</a>
+              </li>
+              <li class="mr-3">
+                <a href="#" class="text-white text-uppercase">sobre nós</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
+    <script src="../src/script/index.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
