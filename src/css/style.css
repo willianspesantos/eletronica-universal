@@ -7,14 +7,71 @@
     --verde-claro: #B8D941;
     --verde-agua: #E6F2BB;
     --fonte-asap : 'Asap', sans-serif;
+    --fonte-ibm : 'IBM Plex Sans Thai', sans-serif;
+}
+
+.produtos .card {
+    width: 15rem;
+}
+
+.produtos .card img {
+    height: 15rem;
+}
+
+.rodape-imagem {
+    height: 75px;
+    
+}
+
+.imagem-nome{
+    width: 200px;
+}
+
+/*pagina formulario*/
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.formulario input, textarea {
+    width: 40%;
+    border: 1px solid black;
+}
+
+/* pagina Sobre nós*/
+.principal-sobre article {
+    background-color: var(--clara);
+    font-family: var(--fonte-ibm);
+    font-size: 22px;
+}
+
+.principal-sobre article h2 {
+    font-size: 50px;
+    padding: 2rem 0;
+}
+
+.principal-sobre article p {
+    padding: 0 3rem;
+}
+
+.loja-img {
+    margin-bottom: 2rem;
+}
+
+.principal-sobre article ul {
+    margin-bottom: 0px;
+    padding: 3rem;
+}
+
+.principal-sobre article ul li{
+    text-decoration: double;
 }
 
 
 
 @media screen and (max-width:991px) {
-    .rede-social {
-        display: none;
-    }
 
     #caixa-mapa {
         flex-direction: column;
@@ -26,7 +83,55 @@
         width: 100%;
     }
 
+    .produtos .card {
+        width: 12rem;
+    }
+    
+    .produtos .card img {
+        height: 12rem;
+    }
+
     #rodape {
         margin: 0 !important;
+    }
+
+    .rodape-nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .carrosel-imagem-1 {
+        height: 400px;
+        object-fit: cover;
+        object-position: 8% 70%;
+    }
+
+    .carrosel-imagem-2 {
+        height: 400px;
+        object-fit: cover;
+        object-position: 40% 70%;
+    }
+    
+    .produtos .card {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .produtos .card img {
+        height: 100%;
+    }
+
+    .imagem-logo{
+        width: 50px;
+    }
+
+    .imagem-nome{
+        width: 150px;
+    }
+
+    .rodape-social-img {
+        height: 32px;
+        width: 32px;
     }
 }

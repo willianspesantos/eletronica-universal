@@ -9,12 +9,9 @@
     <link rel="stylesheet" href="../src/css/header.css" />
     <link rel="stylesheet" href="../src/css/style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital@0;1&family=IBM+Plex+Sans+Thai&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -52,7 +49,7 @@
         <h2 id="chamada">Nossa Experiência Faz a Diferença</h2>
         <span>+ de 50 Anos no mercado</span>
       </header>
-      <main>
+      <main class="principal-sobre">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <button
             class="navbar-toggler"
@@ -82,8 +79,8 @@
               <li class="nav-item">
                 <a
                   class="nav-link text-white text-uppercase"
-                  href="galeria.html"
-                  >Galeria</a
+                  href="produtos.html"
+                  >Produtos</a
                 >
               </li>
               <li class="nav-item">
@@ -120,7 +117,30 @@
             </a>
           </div>
         </nav>
-        
+        <article>
+          <h2 class="text-center">Sobre Nós</h2>
+          <img src="../src/img/loja.png" class="img-fluid w-100 loja-img" alt="Imagem responsiva, loja fisica">
+          <p>A ELETRÔNICA UNIVERSAL, atua no mercado
+            de componentes eletrônicos 
+            <strong>há mais de 50 anos</strong>.</p>
+            <p>Por isso nossa experiência nos permite 
+              afirmar, que sabemos orientar nossos
+              clientes, em suas necessidades de
+              serviços e equipamentos eletrônicos.</p>
+              <p>
+                Nosso portifólio de produtos é realmente
+muito grande:
+              </p>
+              <ul class="">
+                <li>&#8226; Componentes Eletrônicos, Antenas Parabólicas - Antenas para Celular</li>
+                <li>&#8226; Receptores para TV, Conversor para Sinal Digital</li>
+                <li>&#8226; Acessórios para Informática, Roteadores, Estabelizadores, Nobreak</li>
+                <li>&#8226; Telefones, Microfones, Pedestais, Suporte para Partituras, Caixas Amplificaddas</li>
+                <li>&#8226; Reparos para Twitter, Driver, Cabos, Fios, Cabos de Rede, Plugs</li>
+                <li>&#8226; Suporte para TV, Material Elétrico e muito mais...</li>
+                
+              </ul>
+        </article>
       </main>
       <footer class="rodape">
         <div
@@ -128,22 +148,21 @@
             d-flex
             justify-content-between
             align-items-center
-            mt-5
             p-3
             bg-dark
             text-white
           "
           id="rodape"
         >
-          <div>
+          <div class="rodape-imagem">
             <img
               src="../src/img/logoedit.png"
-              class="rodape-logo"
+              class="rodape-logo imagem-logo"
               alt="Logotipo eletronica universal"
             />
             <img
               src="../src/img/nome.png"
-              class="rodape-logo"
+              class="rodape-logo imagem-nome"
               alt="eletronica universal"
             />
           </div>
@@ -161,7 +180,7 @@
                 href="#"
                 class="rodape-social-link rodape-social-link--facebook"
               >
-                <img src="../src/img/facebook-rodape.png" alt="" />
+                <img src="../src/img/facebook-rodape.png" alt="" class="rodape-social-img"/>
               </a>
             </li>
             <li class="mr-3">
@@ -169,7 +188,7 @@
                 href="#"
                 class="rodape-social-link rodape-social-link--twitter"
               >
-                <img src="../src/img/twitter-rodape.png" alt="" />
+                <img src="../src/img/twitter-rodape.png" alt="" class="rodape-social-img"/>
               </a>
             </li>
             <li>
@@ -177,7 +196,7 @@
                 href="#"
                 class="rodape-social-link rodape-social-link--Whatsapp"
               >
-                <img src="../src/img/whatsapp-rodape.png" alt="" />
+                <img src="../src/img/whatsapp-rodape.png" alt="" class="rodape-social-img"/>
               </a>
             </li>
           </ul>
@@ -191,7 +210,7 @@
                 <a href="#" class="text-white text-uppercase">orçamento</a>
               </li>
               <li class="mr-3">
-                <a href="#" class="text-white text-uppercase">galeria</a>
+                <a href="#" class="text-white text-uppercase">produtos</a>
               </li>
               <li class="mr-3">
                 <a href="#" class="text-white text-uppercase">contato</a>
@@ -219,6 +238,6 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
-    ></script>
+    ></script>   
   </body>
 </html>
