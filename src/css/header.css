@@ -1,6 +1,6 @@
 .cabecalho {
     height: 285px;
-    background-image: url('../img/banner-header.jpeg');
+    background-image: url('../img/banner-header.png');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
