@@ -135,13 +135,13 @@
         <div class="orcamento d-flex justify-content-between">
           <section class="secao1">
 
-            <form class="formulario">
+            <form action="enviarEmail.php" class="formulario" method="POST">
               <label for="nome">Nome:</label>
               <input name="nome" class="campo-input" type="text" id="nome" required>
               <label for="email">Email:</label>
               <input name="email" class="campo-input" type="email" id="email" required>
               <label for="cidade">Cidade:</label>
-              <input name="cidade" class="campo-input" type="text" id="cidade">
+              <input name="cidade" class="campo-input" type="text" id="cidade" required>
               <label  for="telefone">Telefone:</label>
               <input name="telefone" class="campo-input" type="number" id="telefone" required>
               <label for="textarea">Descrição:</label>
@@ -150,7 +150,7 @@
             </form>
           </section>
           <section class="secao2 d-flex flex-column align-items-center justify-content-around">
-            <div>
+            <div class="contato">
               <h3>Fale Conosco</h3>
               <p>Nossa equipe está aguardando seu contato!</p> 
               <a href="tel:( 42 ) 3623-5325">
@@ -161,7 +161,7 @@
                 <img src="../src/img/email.png" alt=""> universaleletronica2@gmail.com    
               </a>
             </div>
-            <div>
+            <div class="contatoZap">
               <h3>Deseja atendimento pelo whatsapp?</h3>
               <p>Pode utilizar o botão abaixo, para entrar em contato diretamente com a nossa equipe de atendimento</p>
               <button type="button" class="btn btn-success" data-botaozap>
@@ -169,7 +169,7 @@
                 WhatsApp
               </button>
             </div>
-            <div>
+            <div class="contatoEndereco">
               <h3>Ou venha nos fazer uma visita!</h3>
               <p>Nossa equipe qualificada terá o enorme prazer em atende-lo!</p>
               <address class="text-center">

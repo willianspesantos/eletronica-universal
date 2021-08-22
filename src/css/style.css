@@ -18,6 +18,11 @@
 
 #link-menu:hover {
     color: var(--verde-claro);
+    font-size: 1.05rem;
+}
+
+.redeSocial {
+    border-radius: 15%;
 }
 
 /*pagina produtos*/
