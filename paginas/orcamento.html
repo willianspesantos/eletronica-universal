@@ -115,27 +115,27 @@
           href="https://www.facebook.com/eletronicauniversalguarapuava/"
           target="_blank"
         >
-          <img src="../src/img/facebook.png" alt="logo facebook" />
+          <img class="redeSocial" src="../src/img/facebook.png" alt="logo facebook" />
         </a>
         <a 
         class="nav-link "
          href="https://wa.me/5504299845335?text=Olá,%20encontrei%20seu%20contato%20no%20site%20e"
          target="_blank"
         >
-          <img src="../src/img/whatsapp.png" alt="logo whatsapp" />
+          <img class="redeSocial" src="../src/img/whatsapp.png" alt="logo whatsapp" />
         </a>
         <a class="nav-link "
         href="https://twitter.com/intent/tweet?url=https://eletronicauniversal.com.br"
         target="_blank"
          >
-          <img src="../src/img/twitter.png" alt="logo twitter" />
+          <img class="redeSocial" src="../src/img/twitter.png" alt="logo twitter" />
         </a>
           </div>
         </nav>
         <div class="orcamento d-flex justify-content-between">
           <section class="secao1">
 
-            <form action="enviarEmail.php" class="formulario" method="POST">
+            <form class="formulario mt-3" action="enviarEmail.php" method="POST">
               <label for="nome">Nome:</label>
               <input name="nome" class="campo-input" type="text" id="nome" required>
               <label for="email">Email:</label>
@@ -146,11 +146,11 @@
               <input name="telefone" class="campo-input" type="number" id="telefone" required>
               <label for="textarea">Descrição:</label>
               <textarea name="mensagem" id="textarea" cols="30" rows="7" required></textarea>
-              <input class="btn btn-primary mt-2" type="submit" value="enviar"/>
+              <input class="btn btn-primary mt-2 p-2" type="submit" value="enviar" id="botao-input" />
             </form>
           </section>
           <section class="secao2 d-flex flex-column align-items-center justify-content-around">
-            <div class="contato">
+            <div class="contato mt-5">
               <h3>Fale Conosco</h3>
               <p>Nossa equipe está aguardando seu contato!</p> 
               <a href="tel:( 42 ) 3623-5325">
@@ -161,7 +161,7 @@
                 <img src="../src/img/email.png" alt=""> universaleletronica2@gmail.com    
               </a>
             </div>
-            <div class="contatoZap">
+            <div class="contatoZap mt-5">
               <h3>Deseja atendimento pelo whatsapp?</h3>
               <p>Pode utilizar o botão abaixo, para entrar em contato diretamente com a nossa equipe de atendimento</p>
               <button type="button" class="btn btn-success" data-botaozap>
@@ -169,12 +169,12 @@
                 WhatsApp
               </button>
             </div>
-            <div class="contatoEndereco">
+            <div class="contatoEndereco mt-5">
               <h3>Ou venha nos fazer uma visita!</h3>
               <p>Nossa equipe qualificada terá o enorme prazer em atende-lo!</p>
               <address class="text-center">
                <img src="../src/img/mapa.png" alt="">
-                Rua Dr Laranjeiras nº 1014, Bate, Guarapuava - PR      
+                Rua Dr Laranjeiras nº 1014, Batel, Guarapuava - PR      
               </address>
             </div>          
           </section>
@@ -245,19 +245,19 @@
           <nav class="rodape-nav">
             <ul class="d-flex justify-content-around align-items-center">
               <li class="mr-3">
-                <a href="#" class="text-white text-uppercase">home</a>
+                <a href="../index.html" class="text-white text-uppercase">home</a>
               </li>
               <li class="mr-3">
-                <a href="#" class="text-white text-uppercase">orçamento</a>
+                <a href="./produtos.html" class="text-white text-uppercase">produtos</a>
               </li>
               <li class="mr-3">
-                <a href="#" class="text-white text-uppercase">produtos</a>
+                <a href="./orcamento.html" class="text-white text-uppercase">orçamento</a>
               </li>
               <li class="mr-3">
-                <a href="#" class="text-white text-uppercase">contato</a>
+                <a href="./contato.html" class="text-white text-uppercase">contato</a>
               </li>
               <li class="mr-3">
-                <a href="#" class="text-white text-uppercase">sobre nós</a>
+                <a href="./sobre.html" class="text-white text-uppercase">sobre nós</a>
               </li>
             </ul>
           </nav>

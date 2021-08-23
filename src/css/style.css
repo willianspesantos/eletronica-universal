@@ -34,13 +34,21 @@
     height: 15rem;
 }
 
+/*rodape*/
+
 .rodape-imagem {
     height: 75px;
     
 }
 
 .imagem-nome{
-    width: 200px;
+    max-width: 12.5rem;
+}
+
+/*pagina proodutos*/
+
+.card:hover {
+    border: 2px solid  var(--secundaria);
 }
 
 /*pagina formulario*/
@@ -61,7 +69,7 @@
 }
 
 .formulario input, textarea {
-    border: 1px solid black;
+    border: 1px solid var(--secundaria);
     border-radius: 0.4rem;
 }
 
@@ -78,6 +86,10 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+#botao-input {
+    font-size: 1.5rem;
 }
 
 /* pagina Sobre nós*/
@@ -175,11 +187,11 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
     .imagem-logo{
-        width: 50px;
+        width: 3.125rem;
     }
 
     .imagem-nome{
-        width: 150px;
+        max-width: 9.375rem;
     }
 
     .rodape-social-img {

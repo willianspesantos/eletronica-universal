@@ -21,6 +21,7 @@
     font-size: 32px;
     font-family: var(--fonte-asap);
     color: var(--verde-claro);
+    font-style: italic;
 }
 
 span {
