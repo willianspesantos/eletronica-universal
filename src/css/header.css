@@ -4,7 +4,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
-    flex-direction: column;
 }
 
 .header_banner {
@@ -25,6 +24,7 @@
 }
 
 span {
+    padding-top: 10rem;
     font-family: var(--fonte-asap);
     color: var(--cor-branco);
     font-size: 22px;
@@ -34,6 +34,10 @@ span {
 @media screen and (max-width:1200px) {
     #cabecalho {
         flex-direction: column !important;
+    }
+
+    span {
+        padding-top: 0;
     }
 }
 
@@ -49,8 +53,5 @@ span {
         color: var(--cor-branco);
         font-size: 18px;
     }
-
-    
-    
-            
+           
 }
