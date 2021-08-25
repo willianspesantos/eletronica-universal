@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../src/css/_reset.css" />
   <link rel="stylesheet" href="../src/css/header.css" />
   <link rel="stylesheet" href="../src/css/style.css" />
+  <link rel="stylesheet" href="../src/css/sobre.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -51,7 +52,7 @@
             </li>
           </ul>
         </div>
-        <div class="d-flex flex-row bd-highlight mt-1 mb-2 align-items-center">
+        <div class="d-flex flex-row bd-highlight mt-1 mb-2 align-items-center ">
           <a class="nav-link " href="https://www.facebook.com/eletronicauniversalguarapuava/" target="_blank">
             <img src="../src/img/facebook.png" alt="logo facebook" class="redeSocial" />
           </a>
@@ -68,27 +69,100 @@
       <article>
         <h2 class="text-center titulo-sobre">Sobre Nós</h2>
        
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-              <img src="..." class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-              <img src="..." class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="..." class="d-block w-100" alt="...">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
+      <!-- Carousel wrapper -->
+<div
+id="carouselBasicExample"
+class="carousel slide carousel-fade"
+data-mdb-ride="carousel"
+>
+<!-- Indicators -->
+<div class="carousel-indicators">
+  <button
+    type="button"
+    data-mdb-target="#carouselBasicExample"
+    data-mdb-slide-to="0"
+    class="active"
+    aria-current="true"
+    aria-label="Slide 1"
+  ></button>
+  <button
+    type="button"
+    data-mdb-target="#carouselBasicExample"
+    data-mdb-slide-to="1"
+    aria-label="Slide 2"
+  ></button>
+  <button
+    type="button"
+    data-mdb-target="#carouselBasicExample"
+    data-mdb-slide-to="2"
+    aria-label="Slide 3"
+  ></button>
+</div>
+
+<!-- Inner -->
+<div class="carousel-inner">
+  <!-- Single item -->
+  <div class="carousel-item active">
+    <img
+      src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg"
+      class="d-block w-100"
+      alt="..."
+    />
+    <div class="carousel-caption d-none d-md-block">
+      <h5>loja1</h5>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </div>
+
+  <!-- Single item -->
+  <div class="carousel-item">
+    <img
+      src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg"
+      class="d-block w-100"
+      alt="..."
+    />
+    <div class="carousel-caption d-none d-md-block">
+      <h5>loja2</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
+
+  <!-- Single item -->
+  <div class="carousel-item">
+    <img
+      src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg"
+      class="d-block w-100"
+      alt="..."
+    />
+    <div class="carousel-caption d-none d-md-block">
+      <h5>Third slide label</h5>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </div>
+</div>
+<!-- Inner -->
+
+<!-- Controls -->
+<button
+  class="carousel-control-prev"
+  type="button"
+  data-mdb-target="#carouselBasicExample"
+  data-mdb-slide="prev"
+>
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button
+  class="carousel-control-next"
+  type="button"
+  data-mdb-target="#carouselBasicExample"
+  data-mdb-slide="next"
+>
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+</div>
+<!-- Carousel wrapper -->
 
         <p>A ELETRÔNICA UNIVERSAL, atua no mercado
           de componentes eletrônicos
@@ -124,25 +198,13 @@
       </article>
     </main>
     <footer class="rodape">
-      <div class="
-            d-flex
-            justify-content-between
-            align-items-center
-            p-3
-            bg-dark
-            text-white
-          " id="rodape">
+      <div class=" d-flex justify-content-between align-items-center p-3 bg-dark text-white" id="rodape">
         <div class="rodape-imagem">
           <img src="../src/img/logoedit.png" class="rodape-logo imagem-logo" alt="Logotipo eletronica universal" />
           <img src="../src/img/nome.png" class="rodape-logo imagem-nome" alt="eletronica universal" />
         </div>
 
-        <ul class="
-              rodape-social
-              d-flex
-              justify-content-around
-              align-items-center
-            ">
+        <ul class=" rodape-social d-flex justify-content-around align-items-center">
           <li class="mr-3">
             <a href="#" class="rodape-social-link rodape-social-link--facebook">
               <img class="redeSocial" src="../src/img/facebook-rodape.png" alt="" class="rodape-social-img" />

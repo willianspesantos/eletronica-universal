@@ -25,19 +25,12 @@
     border-radius: 15%;
 }
 
-/*pagina produtos*/
-.produtos .card {
-    width: 15rem;
-}
 
-.produtos .card img {
-    height: 15rem;
-}
-
-/*rodape*/
+/* rodape */
 
 .rodape-imagem {
-    height: 75px;
+    height: 5.3125rem;
+    padding-bottom: 0.5rem;
     
 }
 
@@ -45,122 +38,13 @@
     max-width: 12.5rem;
 }
 
-/*pagina proodutos*/
-
-.card:hover {
-    border: 2px solid  var(--secundaria);
-}
-
-/*pagina formulario*/
-
-.secao1 {
-    width: 45%;
-}
-
-.secao2 {
-    width: 45%;
-    text-align: center;
-}
-
-.formulario {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-}
-
-.formulario input, textarea {
-    border: 1px solid var(--secundaria);
-    border-radius: 0.4rem;
-}
-
-.campo-input {
-    height: 2.5rem;
-    padding: 1rem;
-}
-
-.formulario textarea {
-    padding: 1rem;
-}
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-#botao-input {
-    font-size: 1.5rem;
-}
-
-/* pagina Sobre nós*/
-
-.titulo-sobre {
-    background-color: var(--clara);
-}
-.principal-sobre article {
-    background-color: var(--cor-branco);
-    font-family: var(--fonte-ibm);
-    font-size: 22px;
-}
-
-.principal-sobre article h2 {
-    font-size: 50px;
-    padding: 2rem 0;
-}
-
-.principal-sobre article p {
-    padding: 0 3rem;
-}
-
-.loja-img {
-    margin-bottom: 2rem;
-}
-
-.principal-sobre article ul {
-    margin-bottom: 0px;
-    padding: 3rem;
-}
-
-.principal-sobre article ul li{
-    text-decoration: double;
-}
-
-.principal-sobre .secao-video {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-image: url(../img/fundo-video.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:0% 50%;
-}
-
-.horarios {
-    border: 2px solid var(--cor-branco);
-    font-size: 1.8rem;
-    margin: 1rem;
+.mapaGoogle {
+    border: 1px solid black;
     border-radius: 10%;
-    text-align: center;
-    color: #212416;
-    font-weight: bold;
+    box-shadow: 5px 5px 15px rgba(1, 1, 1, 1.4);
 }
 
-.horarios_titulo {
-    font-size: 3rem;
-    padding: 1rem;
-    font-family: var(--fonte-asap);
-    font-weight: bolder;
-}
-
-.dias {
-    border-top: 2px solid white;
-}
-.video {
-    padding: 1rem;
-    width: 390px;
-    border-radius: 10%;
-}
-
+/* Media Query */
 
 @media screen and (max-width:991px) {
 

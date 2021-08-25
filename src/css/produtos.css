@@ -1,0 +1,12 @@
+
+.produtos .card {
+    width: 15rem;
+}
+
+.produtos .card img {
+    height: 15rem;
+}
+
+.card:hover {
+    border: 2px solid  var(--secundaria);
+}
