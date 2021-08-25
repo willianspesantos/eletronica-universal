@@ -93,8 +93,12 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* pagina Sobre nós*/
-.principal-sobre article {
+
+.titulo-sobre {
     background-color: var(--clara);
+}
+.principal-sobre article {
+    background-color: var(--cor-branco);
     font-family: var(--fonte-ibm);
     font-size: 22px;
 }
@@ -121,6 +125,41 @@ input[type=number]::-webkit-outer-spin-button {
     text-decoration: double;
 }
 
+.principal-sobre .secao-video {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url(../img/fundo-video.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:0% 50%;
+}
+
+.horarios {
+    border: 2px solid var(--cor-branco);
+    font-size: 1.8rem;
+    margin: 1rem;
+    border-radius: 10%;
+    text-align: center;
+    color: #212416;
+    font-weight: bold;
+}
+
+.horarios_titulo {
+    font-size: 3rem;
+    padding: 1rem;
+    font-family: var(--fonte-asap);
+    font-weight: bolder;
+}
+
+.dias {
+    border-top: 2px solid white;
+}
+.video {
+    padding: 1rem;
+    width: 390px;
+    border-radius: 10%;
+}
 
 
 @media screen and (max-width:991px) {
@@ -142,7 +181,7 @@ input[type=number]::-webkit-outer-spin-button {
     .produtos .card img {
         height: 12rem;
     }
-
+    
     #rodape {
         margin: 0 !important;
     }
@@ -154,14 +193,21 @@ input[type=number]::-webkit-outer-spin-button {
     .orcamento {
         flex-direction: column;
     }
-
+    
     .secao1, .secao2 {
         width: 90%;
         margin: 0 auto;
         align-items: center;
         justify-content: center;
     }
-  
+    
+    .principal-sobre .secao-video {
+        flex-direction: column;
+    }
+
+    .video {
+        width: 70%;
+    }
 }
 
 @media screen and (max-width:576px) {
@@ -198,4 +244,5 @@ input[type=number]::-webkit-outer-spin-button {
         height: 32px;
         width: 32px;
     }
+
 }
