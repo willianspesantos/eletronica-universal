@@ -77,3 +77,14 @@
     box-shadow: 5px 5px 15px rgba(1, 1, 1, 1.4);
 }
 
+@media screen and (max-width:991px) {
+    
+    .principal-sobre .secao-video {
+        flex-direction: column;
+    }
+
+    .video {
+        width: 70%;
+    }
+
+}
