@@ -1,309 +1,112 @@
 <?php
 
-session_start();
-
-//Variáveis
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$cidade = $_POST['cidade'];
-$telefone = $_POST['telefone'];
-$mensagem = $_POST['mensagem'];
-$data_envio = date('d/m/Y');
-$hora_envio = date('H:i:s');
+  session_start();
 
 
-if($_SESSION['captcha'] == $_POST['captcha']){
-  
+  use PHPMailer\PHPMailer\PHPMailer;
+  use PHPMailer\PHPMailer\Exception;
+ 
+   //Defino a Chave do meu site
+  $secret_key = '6Lebny0cAAAAAL0BMhtS4yECUof-GjyDKf6bWBEo'; 
 
-  //Compo E-mail
+  //Pego a validação do Captcha feita pelo usuário
+  $recaptcha_response = $_POST['g-recaptcha-response'];
+
+  // Verifico se foi feita a postagem do Captcha 
+  if(isset($recaptcha_response)){
+		
+	// Valido se a ação do usuário foi correta junto ao google
+	$answer = 
+		json_decode(
+			file_get_contents(
+				'https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.
+				'&response='.$_POST['g-recaptcha-response']
+			)
+		);
+
+	// Se a ação do usuário foi correta executo o restante do meu formulário
+	if($answer->success) {
+
+    
+  //Variáveis
+  $nome = $_POST['nome'];
+  $email1 = $_POST['email'];
+  $cidade = $_POST['cidade'];
+  $telefone = $_POST['telefone'];
+  $mensagem = $_POST['mensagem'];
+  $data_envio = date('d/m/Y');
+  $hora_envio = date('H:i:s');
+
+  require "bibliotecas/PHPMailer/Exception.php";
+	require "bibliotecas/PHPMailer/OAuth.php";
+	require "bibliotecas/PHPMailer/PHPMailer.php";
+	require "bibliotecas/PHPMailer/POP3.php";
+	require "bibliotecas/PHPMailer/SMTP.php";
+ 
+
+  //Campo E-mail
   $arquivo = "
     <html>
       <p><b>Nome: </b>$nome</p>
-      <p><b>E-mail: </b>$email</p>
+      <p><b>E-mail: </b>$email1</p>
       <p><b>Cidade: </b>$cidade</p>
       <p><b>Telefone: </b>$telefone</p>
       <p><b>Mensagem: </b>$mensagem</p>
-      <p>Este e-mail foi enviado em <b>$data_envio</b> às <b>$hora_envio</b></p>
+      <p>Este e-mail foi enviado em <b>$data_envio</b> ---> <b>$hora_envio</b></p>
     </html>
   ";
 
-    
-  //Emails para quem será enviado o formulário
-  $destino = "iniciandoprojetoscompic@gmail.com";
-  $assunto = "Contato pelo Site (Orçamento)";
 
-  //Este sempre deverá existir para garantir a exibição correta dos caracteres
-  $email_remetente = "josemourateste1@gmail.com";
-  $headers  = "MIME-Version: 1.0\n";
-  $headers .= "Content-type: text/html; charset=iso-8859-1\n";
-  $headers .= "From: $nome <$email_remetente>";
-  $headers .= "Reply-To: $email\n"; // Endereço (devidamente validado) que o seu usuário informou no contato
+	$mail = new PHPMailer(true);
+	try {
+			//Server settings
+      
+			//$mail->SMTPDebug = 1;                      //Enable verbose debug output
+			$mail->isSMTP();                                            //Send using SMTP
+			$mail->Host= 'smtp.gmail.com';                     //Set the SMTP server to send through
+			$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+      $mail -> SMTPOptions = [
+        'ssl' => [
+            'verify_peer' => false ,
+            'verify_peer_name' => true ,
+            'allow_self_signed' => true ,
+       ]
+   ];
+			$mail->Username = 'josemourateste1@gmail.com';                     //SMTP username
+			$mail->Password='300kms300kms';                               //SMTP password
+			$mail->SMTPSecure = PHPMailer :: ENCRYPTION_STARTTLS;       //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+			$mail->Port       = 587;                                    //TCP port to connect to, use 465 587 for `PHPMailer::ENCRYPTION_SMTPS` above
 
-  //Enviar
-  $envio_mail = mail($destino, $assunto, $arquivo, $headers);
+			//Recipients
+			$mail->setFrom('josemourateste1@gmail.com', 'Contato pelo site(ORCAMENTO)');
+			$mail->addAddress('iniciandoprojetoscompic@gmail.com', 'destinatario');     //Add a recipient
+			//$mail->addAddress($mensagem->__get('para'));     //Add a recipient
+			$mail->addReplyTo($email1, 'Cliente');
+			//$mail->addCC('cc@example.com');
+			//$mail->addBCC('bcc@example.com');
 
-  if($envio_mail){
-    //alert enviado!
-    
-    $msg = "<h1 style='color:green; margin-left: 8%;'>Email enviado com sucesso</h1>";
-    
-}else{
-  $msg = "<h1 style='color:red; margin-left: 8%;'>ERRO! E-mail não enviado.</h1>";
+			//Attachments
+			//$mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+			//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+
+			//Content
+			$mail->isHTML(true);                                  //Set email format to HTML
+			$mail->Subject = 'Contato pelo site(ORCAMENTO)';
+			$mail->Body    = $arquivo;
+			$mail->AltBody = 'Este Email não suporta HTML, contatar o desenvolverdor e reportar esse problema.';
+
+			$mail->send();
+			$msg = 1;
+      
+	} catch (Exception $e) {
+		$msg = 2;        
+	}
+  }else{
+	  $msg = 3;
   }
-} else {
-  $msg = "<h1 style='color:red; margin-left: 8%;'>Caracteres do captcha inválido.</h1>";
-}
+  }
+
+  $_SESSION['mensagem'] = $msg;
+  header("Location: status.php");
+  die();
 ?>
-
-
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../src/css/_reset.css" />
-    <link rel="stylesheet" href="../src/css/header.css" />
-    <link rel="stylesheet" href="../src/css/style.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
-
-    <title>CONTATO - ELETRÔNICA UNIVERSAL</title>
-  </head>
-  <body>
-    <body>
-      <div class="corpo">
-        <header
-          class="
-            cabecalho
-            header_banner
-            d-flex
-            flex-row
-            justify-content-around
-            align-items-center
-          "
-          id="cabecalho"
-        >
-          <h1>
-            <img
-              src="../src/img/logoedit.png"
-             
-              alt="Logotipo eletronica universal"
-            />
-            <img
-              src="../src/img/nome.png"
-              
-              alt="eletronica universal"
-            />
-          </h1>
-          <h2 id="chamada">Nossa Experiência Faz a Diferença</h2>
-          <span>+ de 50 Anos no mercado</span>
-        </header>
-        <main class="principal-sobre">
-          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Alterna navegação"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link text-uppercase"
-                  id="link-menu" href="../index.html"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                  class="nav-link text-uppercase"
-                  id="link-menu"
-                  href="produtos.html"
-                  >Produtos</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link text-uppercase"
-                    id="link-menu"
-                    href="orcamento.html"
-                    >Faça seu Orçamento</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link text-uppercase"
-                    id="link-menu"
-                    href="contato.html"
-                    >Contato</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link text-uppercase"
-                    id="link-menu"
-                    href="sobre.html"
-                    >Sobre Nós</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div
-              class="d-flex flex-row bd-highlight mt-1 mb-2 align-items-center"
-            >
-            <a
-            class="nav-link "
-            href="https://www.facebook.com/eletronicauniversalguarapuava/"
-            target="_blank"
-          >
-            <img src="../src/img/facebook.png" alt="logo facebook" />
-          </a>
-          <a 
-          class="nav-link "
-           href="https://wa.me/5504299845335?text=Olá,%20encontrei%20seu%20contato%20no%20site%20e"
-           target="_blank"
-          >
-            <img src="../src/img/whatsapp.png" alt="logo whatsapp" />
-          </a>
-          <a class="nav-link "
-          href="https://twitter.com/intent/tweet?url=https://eletronicauniversal.com.br"
-          target="_blank"
-           >
-            <img src="../src/img/twitter.png" alt="logo twitter" />
-          </a>
-            </div>
-          </nav>
-          
-        </main>
-        <section>
-
-
-        <img src="../src/img/logo.png" alt="">
-        <?php echo($msg);?>
-
-
-
-
-
-        </section>
-        
-        <footer class="rodape">
-          <div
-            class="
-              d-flex
-              justify-content-between
-              align-items-center
-              p-3
-              bg-dark
-              text-white
-            "
-            id="rodape"
-          >
-            <div class="rodape-imagem">
-              <img
-                src="../src/img/logoedit.png"
-                class="rodape-logo imagem-logo"
-                alt="Logotipo eletronica universal"
-              />
-              <img
-                src="../src/img/nome.png"
-                class="rodape-logo imagem-nome"
-                alt="eletronica universal"
-              />
-            </div>
-  
-            <ul
-              class="
-                rodape-social
-                d-flex
-                justify-content-around
-                align-items-center
-              "
-            >
-            <li class="mr-3">
-              <a
-                href="#"
-                class="rodape-social-link rodape-social-link--facebook"
-              >
-                <img class="redeSocial" src="../src/img/facebook-rodape.png" alt="" class="rodape-social-img"/>
-              </a>
-            </li>
-            <li class="mr-3">
-              <a
-              class="rodape-social-link rodape-social-link--twitter"
-              href="https://twitter.com/intent/tweet?url=https://eletronicauniversal.com.br"
-              target="_blank"
-              >
-                <img class="redeSocial" src="../src/img/twitter-rodape.png" alt="" class="rodape-social-img"/>
-              </a>
-            </li>
-            <li>
-              <a
-              class="rodape-social-link rodape-social-link--Whatsapp"
-              href="https://wa.me/5504299845335?text=Olá,%20encontrei%20seu%20contato%20no%20site%20e"
-              target="_blank"
-              >
-                <img class="redeSocial" src="../src/img/whatsapp-rodape.png" alt="" class="rodape-social-img"/>
-              </a>
-            </li>
-            </ul>
-  
-            <nav class="rodape-nav">
-              <ul class="d-flex justify-content-around align-items-center">
-                <li class="mr-3">
-                  <a href="../index.html" class="text-white text-uppercase">home</a>
-                </li>
-                <li class="mr-3">
-                  <a href="./produtos.html" class="text-white text-uppercase">produtos</a>
-                </li>
-                <li class="mr-3">
-                  <a href="./orcamento.html" class="text-white text-uppercase">orçamento</a>
-                </li>
-                <li class="mr-3">
-                  <a href="./contato.html" class="text-white text-uppercase">contato</a>
-                </li>
-                <li class="mr-3">
-                  <a href="./sobre.html" class="text-white text-uppercase">sobre nós</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </footer>
-      </div>
-      <script src="../src/script/index.js"></script>
-      <script
-        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"
-      ></script>   
-    </body>
-  </body>
-</html>
