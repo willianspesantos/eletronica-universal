@@ -1,0 +1,53 @@
+.secao1 {
+    width: 45%;
+}
+
+.secao2 {
+    width: 45%;
+    text-align: center;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.formulario input, textarea {
+    border: 1px solid var(--secundaria);
+    border-radius: 0.4rem;
+}
+
+.campo-input {
+    height: 2.5rem;
+    padding: 1rem;
+}
+
+.formulario textarea {
+    padding: 1rem;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#botao-input {
+    font-size: 1.5rem;
+}
+
+@media screen and(max-width:991px) {
+    
+    .orcamento {
+        flex-direction: column;
+    }
+    
+    .secao1, .secao2 {
+        width: 90%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}

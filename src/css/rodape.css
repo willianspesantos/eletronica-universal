@@ -1,0 +1,37 @@
+
+.rodape-imagem {
+    height: 5.3125rem;    
+}
+
+.imagem-nome{
+    max-width: 12.5rem;
+}
+
+@media screen and (max-width:991px) {
+
+    #rodape {
+        margin: 0 !important;
+    }
+
+    .rodape-nav {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:576px) {
+
+     
+    .imagem-logo{
+        width: 3.125rem;
+    }
+
+    .imagem-nome{
+        max-width: 9.375rem;
+    }
+
+    .rodape-social-img {
+        height: 32px;
+        width: 32px;
+    }
+}

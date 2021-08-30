@@ -23,7 +23,7 @@
     font-style: italic;
 }
 
-span {
+.cabecalho span {
     padding-top: 10rem;
     font-family: var(--fonte-asap);
     color: var(--cor-branco);
