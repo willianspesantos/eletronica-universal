@@ -3,6 +3,10 @@
     background-color: var(--clara);
 }
 
+.carrossel-sobre {
+    height: 500px;
+}
+
 .principal-sobre article {
     background-color: var(--cor-branco);
     font-family: var(--fonte-ibm);
@@ -12,6 +16,7 @@
 .principal-sobre article h2 {
     font-size: 50px;
     padding: 2rem 0;
+
     margin-bottom: 0;
 }
 

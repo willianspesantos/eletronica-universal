@@ -35,6 +35,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 #botao-input {
     font-size: 1.5rem;
+
 }
 
 @media screen and(max-width:991px) {
@@ -49,5 +50,5 @@ input[type=number]::-webkit-outer-spin-button {
         align-items: center;
         justify-content: center;
     }
-    
+
 }

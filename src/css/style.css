@@ -25,7 +25,18 @@
     border-radius: 15%;
 }
 
-/* conteudo index */
+/* rodape */
+
+.rodape-imagem {
+    height: 5.3125rem;
+    padding-bottom: 0.5rem;
+    
+}
+
+.imagem-nome{
+    max-width: 12.5rem;
+}
+
 
 .mapaGoogle {
     border: 1px solid black;
