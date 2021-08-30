@@ -1,3 +1,152 @@
+<?php
+	date_default_timezone_set('America/Sao_Paulo');
+  
+  use PHPMailer\PHPMailer\PHPMailer;
+  use PHPMailer\PHPMailer\Exception;
+
+  function clean_input($data){
+    $cleandata = trim($data);
+    $cleandata = stripslashes($cleandata);
+    $cleandata = htmlspecialchars($cleandata);
+
+    return $cleandata;
+  }
+  $sucess_email = "";
+  $erro_nome = "";
+  $erro_email = "";
+  $erro_cidade = "";
+  $erro_telefone = "";
+  $erro_menssagem = "";
+  
+  if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $nome = $_POST['nome'];
+    $email1 = $_POST['email'];
+    $cidade = $_POST['cidade'];
+    $telefone = $_POST['telefone'];
+    $mensagem = $_POST['mensagem'];
+    if ($nome == "") {
+      $erro_nome = '<p style="color:red;">* O nome é obrigatório</p>';
+    } elseif($email1 == "") {
+      $erro_email = '<p style="color:red;">* O e-mail é obrigatório</p>';
+    } elseif($cidade == "") {
+      $erro_cidade = '<p style="color:red;">* O campo cidade é obrigatório</p>';
+    } elseif($telefone == "") {
+      $erro_telefone = '<p style="color:red;">* O telefone é obrigatório</p>';
+    }elseif($mensagem == "") {
+      $erro_menssagem = '<p style="color:red;">* O campo mensagem é obrigatório</p>';
+    }elseif( filter_var($email1, FILTER_VALIDATE_EMAIL) == false) {
+      $erro_email = '<p style="color:red;">* O e-mail informado é invalido!</p>';
+    } else {
+      $nome = clean_input($nome);
+      $email1 = clean_input($email1);
+      $cidade = clean_input($cidade);
+      $telefone = clean_input($telefone);
+      $mensagem = clean_input($mensagem);      
+    }
+     
+   //Defino a Chave do meu site
+    $secret_key = '6Lebny0cAAAAAL0BMhtS4yECUof-GjyDKf6bWBEo'; 
+
+    //Pego a validação do Captcha feita pelo usuário
+    $recaptcha_response = $_POST['g-recaptcha-response'];
+
+    // Verifico se foi feita a postagem do Captcha 
+    if(isset($recaptcha_response)){
+      
+    // Valido se a ação do usuário foi correta junto ao google
+    $answer = 
+      json_decode(
+        file_get_contents(
+          'https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.
+          '&response='.$_POST['g-recaptcha-response']
+        )
+      );
+
+    // Se a ação do usuário foi correta executo o restante do meu formulário
+    if($answer->success) {
+
+      $data_envio = date('d/m/Y');
+      $hora_envio = date('H:i:s');
+
+      require "bibliotecas/PHPMailer/Exception.php";
+      require "bibliotecas/PHPMailer/OAuth.php";
+      require "bibliotecas/PHPMailer/PHPMailer.php";
+      require "bibliotecas/PHPMailer/POP3.php";
+      require "bibliotecas/PHPMailer/SMTP.php";
+    
+
+      //Campo E-mail
+      $arquivo = "
+      <html>
+        <p><b>Nome: </b>$nome</p>
+        <p><b>E-mail: </b>$email1</p>
+        <p><b>Cidade: </b>$cidade</p>
+        <p><b>Telefone: </b>$telefone</p>
+        <p><b>Mensagem: </b>$mensagem</p>
+        <p>Este e-mail foi enviado em <b>$data_envio</b> ---> <b>$hora_envio</b></p>
+      </html>";
+
+
+      $mail = new PHPMailer(true);
+      $mail->CharSet="UTF-8";
+      try {
+        //Server settings
+        
+        //$mail->SMTPDebug = 1;                      //Enable verbose debug output
+        $mail->isSMTP();                                            //Send using SMTP
+        $mail->Host= 'smtp.gmail.com';                     //Set the SMTP server to send through
+        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+        $mail -> SMTPOptions = [
+          'ssl' => [
+            'verify_peer' => false ,
+            'verify_peer_name' => true ,
+            'allow_self_signed' => true ,
+          ]
+        ];
+        $mail->Username = 'josemourateste1@gmail.com';                     //SMTP username
+        $mail->Password='300kms300kms';                               //SMTP password
+        $mail->SMTPSecure = PHPMailer :: ENCRYPTION_STARTTLS;       //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+        $mail->Port       = 587;                                    //TCP port to connect to, use 465 587 for `PHPMailer::ENCRYPTION_SMTPS` above
+
+        //Recipients
+        $mail->setFrom('josemourateste1@gmail.com', 'Contato pelo site(ORCAMENTO)');
+        $mail->addAddress('iniciandoprojetoscompic@gmail.com', 'destinatario');     //Add a recipient
+        //$mail->addAddress($mensagem->__get('para'));     //Add a recipient
+        $mail->addReplyTo($email1, 'Cliente');
+        //$mail->addCC('cc@example.com');
+        //$mail->addBCC('bcc@example.com');
+
+        //Attachments
+        //$mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+        //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+
+        //Content
+        $mail->isHTML(true);                                  //Set email format to HTML
+        $mail->Subject = 'Contato pelo site(ORCAMENTO)';
+        $mail->Body    = $arquivo;
+        $mail->AltBody = 'Este Email não suporta HTML, contatar o desenvolverdor e reportar esse problema.';
+
+        $mail->send();
+        $msg = 1;       
+      } catch (Exception $e) {         
+          $msg = 2;        
+          }
+      }else{
+      $msg = 3;
+    }
+    
+    if ($msg == 1) {
+      $sucess_email = '<h2 style="color:green;">E-mail enviado com sucesso!</h2>';
+    } else if ($msg == 2) {
+      $sucess_email = '<p style="color:red;">Email não foi enviado por causa de um erro desconhecido. Volte mais tarde e tente novamente.</p>';  
+    } else if ($msg == 3) {
+      $sucess_email = '<h2 style="color:red;">ERRO! Valide com o reCAPTCHA!</h2>';  
+    }
+
+  }
+ 
+}  
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -129,19 +278,25 @@
         <div class="orcamento d-flex justify-content-between">
           <section class="secao1">
 
-            <form class="formulario mt-3" action="enviarEmail.php"  method="POST">
+            <form class="formulario mt-3" action="orcamento.php"  method="POST">
+              <div class="sucesso-form"><?php echo $sucess_email;?></div>
               <label for="nome">Nome:</label>
               <input name="nome" class="campo-input" type="text" id="nome" required>
+              <div class="erro-form"><?php echo $erro_nome;?></div>
               <label for="email">Email:</label>
               <input name="email" class="campo-input" type="email" id="email" required>
+              <div class="erro-form"><?php echo $erro_email;?></div>
               <label for="cidade">Cidade:</label>
               <input name="cidade" class="campo-input" type="text" id="cidade" required>
+              <div class="erro-form"><?php echo $erro_cidade;?></div>
               <label  for="telefone">Telefone:</label>
               <input name="telefone" class="campo-input" type="number" id="telefone" required>
+              <div class="erro-form"><?php echo $erro_telefone;?></div>
               <label for="textarea">Descrição:</label>
               <textarea name="mensagem" id="textarea" cols="30" rows="7" required></textarea>
-              <div class="g-recaptcha" data-sitekey="6Lebny0cAAAAADxbEhiFKlRA3GEe6CWgAAXLQ1CH"></div>
-              <input class="btn btn-primary mt-2 p-2" type="submit" value="enviar" id="botao-input" />
+              <div class="erro-form"><?php echo $erro_menssagem;?></div>
+              <div class="g-recaptcha" data-sitekey="6Lebny0cAAAAADxbEhiFKlRA3GEe6CWgAAXLQ1CH" required></div>
+              <input class="btn btn-primary mt-2 p-2" type="submit" value="enviar" id="botao-input" />              
             </form>
           </section>
           <section class="secao2 d-flex flex-column align-items-center justify-content-around">
