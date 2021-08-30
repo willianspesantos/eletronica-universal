@@ -36,18 +36,3 @@ input[type=number]::-webkit-outer-spin-button {
 #botao-input {
     font-size: 1.5rem;
 }
-
-@media screen and(max-width:991px) {
-    
-    .orcamento {
-        flex-direction: column;
-    }
-    
-    .secao1, .secao2 {
-        width: 90%;
-        margin: 0 auto;
-        align-items: center;
-        justify-content: center;
-    }
-    
-}

@@ -25,7 +25,18 @@
     border-radius: 15%;
 }
 
-/* conteudo index */
+
+/* rodape */
+
+.rodape-imagem {
+    height: 5.3125rem;
+    padding-bottom: 0.5rem;
+    
+}
+
+.imagem-nome{
+    max-width: 12.5rem;
+}
 
 .mapaGoogle {
     border: 1px solid black;
@@ -44,10 +55,43 @@
     }
 
     #caixa-mapa iframe {
-        width: 90%;
-        margin: 0.5rem auto;
+        width: 100%;
     }
 
+    .produtos .card {
+        width: 12rem;
+    }
+    
+    .produtos .card img {
+        height: 12rem;
+    }
+    
+    #rodape {
+        margin: 0 !important;
+    }
+
+    .rodape-nav {
+        display: none;
+    }
+
+    .orcamento {
+        flex-direction: column;
+    }
+    
+    .secao1, .secao2 {
+        width: 90%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .principal-sobre .secao-video {
+        flex-direction: column;
+    }
+
+    .video {
+        width: 70%;
+    }
 }
 
 @media screen and (max-width:576px) {
@@ -62,7 +106,27 @@
         object-fit: cover;
         object-position: 40% 70%;
     }
-   
     
+    .produtos .card {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .produtos .card img {
+        height: 100%;
+    }
+
+    .imagem-logo{
+        width: 3.125rem;
+    }
+
+    .imagem-nome{
+        max-width: 9.375rem;
+    }
+
+    .rodape-social-img {
+        height: 32px;
+        width: 32px;
+    }
 
 }
