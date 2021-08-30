@@ -48,10 +48,11 @@
         color: var(--verde-claro);
     }
 
-    span {
+    #cabecalho span {
         font-family: var(--fonte-asap);
         color: var(--cor-branco);
         font-size: 18px;
+        padding-top: 0;
     }
            
 }

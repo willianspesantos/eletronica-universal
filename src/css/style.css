@@ -25,6 +25,10 @@
     border-radius: 15%;
 }
 
+.endereco {
+    line-height: 2rem;
+}
+
 /* rodape */
 
 .rodape-imagem {
