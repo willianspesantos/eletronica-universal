@@ -102,7 +102,6 @@ const itens = [
 function mostrarProdutos() {
     
     itens.map((item)=>{
-        console.log(item.descricao)
         const cardConteudo = `
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3 " ${item.id}>
         <div class="card">

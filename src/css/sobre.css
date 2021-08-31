@@ -16,16 +16,16 @@
 .principal-sobre article h2 {
     font-size: 50px;
     padding: 2rem 0;
-
     margin-bottom: 0;
 }
 
-.carousel-inner {
+#carrossel .carousel-inner {
+    width: 98%;
     max-height: 500px;
     max-width: 1500px;
     margin: 3rem auto;
     border: 2px solid black;
-    border-radius: 10%;
+    border-radius: 3%;
     box-shadow: 3px 3px 5px rgba(1, 1, 1, 1.4);
 }
 
@@ -33,6 +33,45 @@
     height: 100%;
 }
 
+.sobre__conteudo {
+    height: 500px;
+    background: url('../img/sobre/bannerSobre2.jpeg') center / cover no-repeat ;
+    border-bottom: 5px solid white;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.sobre__conteudo___caixa {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    max-width: 50%;    
+    color: white;
+    height: 100%;    
+    padding: 4rem;
+}
+
+.caixa-texto {
+    border: 1px solid black;
+    background-color: rgba(1, 1, 1, 0.6);
+    border-radius: 10%;
+    padding: 0.6rem;
+}
+
+.sobre__portifolio {
+    background: url('../img/sobre/bannerSobre1.jpeg') center / cover no-repeat ;
+    height: 500px;
+    border-bottom: 5px solid white;
+}
+
+.sobre__portifolio___lista {
+    max-width: 50%;
+    background-color: rgba(1, 1, 1, 0.4);
+    color: white;
+    height: 100%;
+    padding: 1rem;
+}
 
 .principal-sobre article p {
     padding: 0 3rem;
@@ -44,7 +83,7 @@
 
 .principal-sobre article ul {
     margin-bottom: 0px;
-    padding: 3rem;
+    padding: 1.5rem;
 }
 
 .principal-sobre article ul li{
@@ -93,8 +132,42 @@
     box-shadow: 5px 5px 15px rgba(1, 1, 1, 1.4);
 }
 
+@media screen and (max-width:1200px) {
+    .sobre__portifolio___lista {
+        max-width: 70%;
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 3rem;
+    }
+}
+
 @media screen and (max-width:991px) {
     
+    .sobre__portifolio___lista {
+        max-width: 100%;
+    }
+
+    .sobre__conteudo {
+        flex-direction: column ;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .sobre__conteudo___caixa {
+        max-width: 80%;    
+        height: 100%;    
+        padding: 1rem;
+    }
+
+    .caixa-texto {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     .principal-sobre .secao-video {
         flex-direction: column;
     }
@@ -103,4 +176,14 @@
         width: 70%;
     }
 
+}
+
+@media screen and (max-width:576px) {
+    .sobre__portifolio___lista {
+        font-size: 1rem;
+    }
+    
+    .caixa-texto {
+        font-size: 1.2rem;
+    }
 }
