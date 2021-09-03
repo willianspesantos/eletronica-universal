@@ -17,6 +17,8 @@
   $erro_cidade = "";
   $erro_telefone = "";
   $erro_menssagem = "";
+  $numero_IP = "";
+  $dispositivo = "";
   
   if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $nome = $_POST['nome'];
@@ -24,6 +26,8 @@
     $cidade = $_POST['cidade'];
     $telefone = $_POST['telefone'];
     $mensagem = $_POST['mensagem'];
+    $numero_IP = $_SERVER['REMOTE_ADDR'];
+    $dispositivo = $_SERVER['HTTP_USER_AGENT'];
     if ($nome == "") {
       $erro_nome = '<p style="color:red;">* O nome é obrigatório</p>';
     } elseif($email1 == "") {
@@ -83,6 +87,8 @@
         <p><b>Cidade: </b>$cidade</p>
         <p><b>Telefone: </b>$telefone</p>
         <p><b>Mensagem: </b>$mensagem</p>
+        <p><b>Numero-IP: </b>$numero_IP</p>
+        <p><b>Dispositivo: </b>$dispositivo</p>
         <p>Este e-mail foi enviado em <b>$data_envio</b> ---> <b>$hora_envio</b></p>
       </html>";
 
