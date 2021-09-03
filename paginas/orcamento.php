@@ -178,27 +178,10 @@
   <body>
     <div class="corpo">
       <header
-        class="
-          cabecalho
-          header_banner
-          d-flex
-          flex-row
-          justify-content-around
-          align-items-center
-        "
-        id="cabecalho"
-      >
+        class="cabecalho header_banner d-flex flex-row justify-content-around align-items-center" id="cabecalho">
         <h1>
-          <img
-            src="../src/img/logoedit.png"
-            
-            alt="Logotipo eletronica universal"
-          />
-          <img
-            src="../src/img/nome.png"
-            
-            alt="eletronica universal"
-          />
+          <img src="../src/img/logoedit.png" alt="Logotipo eletronica universal" />
+          <img src="../src/img/nome.png" alt="eletronica universal" />
         </h1>
         <h2 id="chamada">Nossa Experiência Faz a Diferença</h2>
         <span>+ de 50 Anos no mercado</span>
@@ -357,16 +340,10 @@
           </div>
 
           <ul
-            class="
-              rodape-social
-              d-flex
-              justify-content-around
-              align-items-center
-            "
-          >
+            class=" rodape-social d-flex justify-content-around align-items-center">
           <li class="mr-3">
             <a
-              href="#"
+              href="https://www.facebook.com/eletronicauniversalguarapuava/"
               class="rodape-social-link rodape-social-link--facebook"
             >
               <img src="../src/img/facebook-rodape.png" alt="" class="rodape-social-img"/>

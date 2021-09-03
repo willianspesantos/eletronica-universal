@@ -15,8 +15,8 @@ const itens = [
     
     {
         id: 2,
-        img : 'caixa-som',
-        descricao : 'Caixa de Som'
+        img : 'minicaixa',
+        descricao : 'Mini Caixa de Som'
     },
     
     {
@@ -95,8 +95,37 @@ const itens = [
         id: 15,
         img : 'tvbox',
         descricao : 'Tv Box'
-    }
+    },
     
+    {
+        id: 16,
+        img : 'espaguete',
+        descricao : 'Espaguete Termo Retrátil'
+    },
+    
+    {
+        id: 17,
+        img : 'fone',
+        descricao : 'Fone de Ouvido'
+    },
+    
+    {
+        id: 18,
+        img : 'lanterna',
+        descricao : 'Lanterna'
+    },
+    
+    {
+        id: 19,
+        img : 'ring',
+        descricao : 'Ring Light'
+    },
+    
+    {
+        id: 20,
+        img : 'transformador',
+        descricao : 'Auto Transformador'
+    }
 ]
 
 function mostrarProdutos() {
