@@ -1,14 +1,12 @@
 .cabecalho {
-    height: 285px;
-    background-image: url('../img/banner-header.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url('../img/banner-header.png') center / cover no-repeat;    
     display: flex;
+    height: 285px;
 }
 
 .header_banner {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-around;
 }
 
@@ -17,17 +15,17 @@
 }
 
 #chamada {
-    font-size: 32px;
-    font-family: var(--fonte-asap);
     color: var(--verde-claro);
+    font-family: var(--fonte-asap);
+    font-size: 32px;
     font-style: italic;
 }
 
 .cabecalho span {
-    padding-top: 10rem;
-    font-family: var(--fonte-asap);
     color: var(--cor-branco);
+    font-family: var(--fonte-asap);
     font-size: 22px;
+    padding-top: 10rem;
 }
 
 
@@ -36,21 +34,22 @@
         flex-direction: column !important;
     }
 
-    span {
+    #cabecalho span {
+        color: var(--cor-branco);
         padding-top: 0;
     }
 }
 
 @media screen and (max-width:680px) {
     #chamada {
-        font-size: 22px;
-        font-family: var(--fonte-asap);
         color: var(--verde-claro);
+        font-family: var(--fonte-asap);
+        font-size: 22px;
     }
 
     #cabecalho span {
-        font-family: var(--fonte-asap);
         color: var(--cor-branco);
+        font-family: var(--fonte-asap);
         font-size: 18px;
         padding-top: 0;
     }

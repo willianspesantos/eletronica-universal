@@ -20,13 +20,13 @@
 }
 
 #carrossel .carousel-inner {
-    width: 98%;
-    max-height: 500px;
-    max-width: 1500px;
-    margin: 3rem auto;
     border: 2px solid black;
     border-radius: 3%;
     box-shadow: 3px 3px 5px rgba(1, 1, 1, 1.4);
+    margin: 3rem auto;
+    max-height: 500px;
+    max-width: 1500px;
+    width: 98%;
 }
 
 .carousel-inner .carousel-item .active img {
@@ -34,42 +34,42 @@
 }
 
 .sobre__conteudo {
-    height: 500px;
     background: url('../img/sobre/bannerSobre2.jpeg') center / cover no-repeat ;
     border-bottom: 5px solid white;
     display: flex;
+    height: 500px;
     justify-content: flex-end;
     
 }
 
 .sobre__conteudo___caixa {
-    display: flex;
     align-items: center;
+    color: white;
+    display: flex;
+    height: 100%;    
     text-align: center;
     max-width: 50%;    
-    color: white;
-    height: 100%;    
     padding: 4rem;
 }
 
 .caixa-texto {
-    border: 1px solid black;
     background-color: rgba(1, 1, 1, 0.6);
+    border: 1px solid black;
     border-radius: 25px;
     padding: 0.6rem;
 }
 
 .sobre__portifolio {
     background: url('../img/sobre/bannerSobre1.jpeg') center / cover no-repeat ;
-    height: 500px;
     border-bottom: 5px solid white;
+    height: 500px;
 }
 
 .sobre__portifolio___lista {
-    max-width: 50%;
     background-color: rgba(1, 1, 1, 0.6);
     color: white;
     height: 100%;
+    max-width: 50%;
     padding: 1rem;
 }
 
@@ -92,52 +92,49 @@
 
 
 .principal-sobre .secao-video {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-around;
-    background-image: url(../img/fundo-video.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:0% 50%;
+    background: url(../img/fundo-video.jpg) center/ cover no-repeat;
+    background-position: 0% 50%;
 }
 
 .horarios {
-    /*border: 2px solid var(--cor-branco);*/
-    font-size: 1.8rem;
-    margin: 1rem;
     border-radius: 10%;
-    text-align: center;
     color: #212416;
-    font-weight: bold;
     border: 1px solid white;
     border-radius: 10%;
     box-shadow: 5px 5px 15px rgba(1, 1, 1, 1.4);
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 1rem;
+    text-align: center;
 }
 
 .horarios_titulo {
-    font-size: 3rem;
-    padding: 1rem;
     font-family: var(--fonte-asap);
+    font-size: 3rem;
     font-weight: bolder;
+    padding: 1rem;
 }
 
 .dias {
     border-top: 2px solid white;
 }
 .video {
-    padding: 1rem;
-    width: 390px;
     border: 1px solid black;
     border-radius: 10%;
     box-shadow: 5px 5px 15px rgba(1, 1, 1, 1.4);
+    padding: 1rem;
+    width: 390px;
 }
 
 @media screen and (max-width:1200px) {
     .sobre__portifolio___lista {
-        max-width: 70%;
         font-size: 1.2rem;
-        text-align: center;
+        max-width: 70%;
         padding: 3rem;
+        text-align: center;
     }
 }
 
@@ -148,23 +145,23 @@
     }
 
     .sobre__conteudo {
+        align-items: center;
         flex-direction: column ;
         justify-content: center;
-        align-items: center;
         
     }
 
     .sobre__conteudo___caixa {
-        max-width: 80%;    
         height: 100%;    
+        max-width: 80%;    
         padding: 1rem;
     }
 
     .caixa-texto {
-        height: 80%;
+        align-items: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        height: 80%;
         justify-content: center;
     }
 
@@ -180,17 +177,16 @@
 
 @media screen and (max-width:576px) {
     .sobre__portifolio___lista {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .principal-sobre article ul {
         margin-bottom: 0px;
-        padding: 1.2rem;
+        padding: 1.1rem;
     }
     
     .caixa-texto {
         font-size: 0.9rem;
     }
-
 
 }

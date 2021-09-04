@@ -1,9 +1,8 @@
-.secao1 {
+.secao1, .secao2 {
     width: 45%;
 }
 
 .secao2 {
-    width: 45%;
     text-align: center;
 }
 
@@ -38,17 +37,17 @@ input[type=number]::-webkit-outer-spin-button {
 
 }
 
-@media screen and(max-width:991px) {
+@media screen and (max-width:991px) {
     
     .orcamento {
         flex-direction: column;
     }
     
     .secao1, .secao2 {
-        width: 90%;
-        margin: 0 auto;
         align-items: center;
         justify-content: center;
+        margin: 0 auto;
+        width: 90%;
     }
 
 }
