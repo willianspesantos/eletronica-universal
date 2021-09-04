@@ -14,7 +14,7 @@
     border-radius: 4rem;
 }
 
-#chamada {
+.cabecalho__subtitulo {
     color: var(--verde-claro);
     font-family: var(--fonte-asap);
     font-size: 32px;
@@ -41,13 +41,13 @@
 }
 
 @media screen and (max-width:680px) {
-    #chamada {
+    .cabecalho__subtitulo {
         color: var(--verde-claro);
         font-family: var(--fonte-asap);
         font-size: 22px;
     }
 
-    #cabecalho span {
+    .cabecalho span {
         color: var(--cor-branco);
         font-family: var(--fonte-asap);
         font-size: 18px;

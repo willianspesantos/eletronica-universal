@@ -15,6 +15,7 @@
 .formulario input, textarea {
     border: 1px solid var(--secundaria);
     border-radius: 0.4rem;
+    margin-bottom: 1rem;
 }
 
 .campo-input {

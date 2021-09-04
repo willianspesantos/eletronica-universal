@@ -10,21 +10,6 @@
     --fonte-ibm : 'IBM Plex Sans Thai', sans-serif;
 }
 
-/*menu navegação*/
-
-#link-menu {
-    color: var(--cor-branco);
-}
-
-#link-menu:hover {
-    color: var(--verde-claro);
-    font-size: 1.05rem;
-}
-
-.redeSocial {
-    border-radius: 15%;
-}
-
 .mapa h2 {
     font-size: 2.8rem;
     font-weight: bolder;
@@ -34,22 +19,9 @@
     font-size: 1.8rem;
 }
 
-.endereco {
+.mapa-coluna__endereco {
     line-height: 2rem;
 }
-
-/* rodape */
-
-.rodape-imagem {
-    height: 5.3125rem;
-    padding-bottom: 0.5rem;
-    
-}
-
-.imagem-nome{
-    max-width: 12.5rem;
-}
-
 
 .mapaGoogle {
     border: 1px solid black;
@@ -68,13 +40,13 @@
         font-size: 1.4rem;
     }
 
-    #caixa-mapa {
+    .caixa-mapa {
         flex-direction: column;
         text-align: center;
         justify-content: space-between;
     }
 
-    #caixa-mapa iframe {
+    .caixa-mapa iframe {
         width: 90%;
         margin: 0.5rem auto;
     }
@@ -100,8 +72,5 @@
         height: 400px;
         object-fit: cover;
         object-position: 40% 70%;
-    }
-   
-    
-
+    }  
 }

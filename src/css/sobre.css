@@ -19,7 +19,7 @@
     margin-bottom: 0;
 }
 
-#carrossel .carousel-inner {
+.carrossel .carousel-inner {
     border: 2px solid black;
     border-radius: 3%;
     box-shadow: 3px 3px 5px rgba(1, 1, 1, 1.4);
@@ -33,7 +33,7 @@
     height: 100%;
 }
 
-.sobre__conteudo {
+.principal-sobre__conteudo {
     background: url('../img/sobre/bannerSobre2.jpeg') center / cover no-repeat ;
     border-bottom: 5px solid white;
     display: flex;
@@ -42,7 +42,7 @@
     
 }
 
-.sobre__conteudo___caixa {
+.principal-sobre__conteudo___caixa {
     align-items: center;
     color: white;
     display: flex;
@@ -59,39 +59,33 @@
     padding: 0.6rem;
 }
 
-.sobre__portifolio {
+.principal-sobre__portifolio {
     background: url('../img/sobre/bannerSobre1.jpeg') center / cover no-repeat ;
     border-bottom: 5px solid white;
     height: 500px;
 }
 
-.sobre__portifolio___lista {
+.principal-sobre__portifolio___lista {
     background-color: rgba(1, 1, 1, 0.6);
     color: white;
+    font-size: 1.2rem;
     height: 100%;
     max-width: 50%;
     padding: 1rem;
 }
 
-.principal-sobre article p {
-    padding: 0 3rem;
-}
 
-.loja-img {
-    margin-bottom: 2rem;
-}
-
-.principal-sobre article ul {
+.principal-sobre__portifolio___lista ul{
     margin-bottom: 0px;
     padding: 1.5rem;
 }
 
-.principal-sobre article ul li{
+.principal-sobre__portifolio___lista ul li{
     text-decoration: double;
 }
 
 
-.principal-sobre .secao-video {
+.principal-sobre__secao-video {
     align-items: center;
     display: flex;
     justify-content: space-around;
@@ -99,7 +93,7 @@
     background-position: 0% 50%;
 }
 
-.horarios {
+.principal-sobre__secao-video___horarios {
     border-radius: 10%;
     color: #212416;
     border: 1px solid white;
@@ -109,6 +103,10 @@
     font-weight: bold;
     margin: 1rem;
     text-align: center;
+}
+
+.principal-sobre__secao-video___horarios p {
+    padding: 0 3rem;
 }
 
 .horarios_titulo {
@@ -121,6 +119,7 @@
 .dias {
     border-top: 2px solid white;
 }
+
 .video {
     border: 1px solid black;
     border-radius: 10%;
@@ -130,7 +129,7 @@
 }
 
 @media screen and (max-width:1200px) {
-    .sobre__portifolio___lista {
+    .principal-sobre__portifolio___lista {
         font-size: 1.2rem;
         max-width: 70%;
         padding: 3rem;
@@ -140,23 +139,19 @@
 
 @media screen and (max-width:991px) {
     
-    .sobre__portifolio___lista {
-        max-width: 100%;
-    }
-
-    .sobre__conteudo {
+    .principal-sobre__conteudo {
         align-items: center;
         flex-direction: column ;
         justify-content: center;
         
     }
-
-    .sobre__conteudo___caixa {
+    
+    .principal-sobre__conteudo___caixa {
         height: 100%;    
         max-width: 80%;    
         padding: 1rem;
     }
-
+    
     .caixa-texto {
         align-items: center;
         display: flex;
@@ -164,8 +159,13 @@
         height: 80%;
         justify-content: center;
     }
-
-    .principal-sobre .secao-video {
+    
+    .principal-sobre__portifolio___lista {
+        font-size: 1.1rem;
+        max-width: 100%;
+    }
+    
+    .principal-sobre__secao-video {
         flex-direction: column;
     }
 
@@ -176,13 +176,10 @@
 }
 
 @media screen and (max-width:576px) {
-    .sobre__portifolio___lista {
-        font-size: 0.9rem;
-    }
-
-    .principal-sobre article ul {
+    .principal-sobre__portifolio___lista {
+        font-size: 0.98rem;
         margin-bottom: 0px;
-        padding: 1.1rem;
+        padding: 1rem;
     }
     
     .caixa-texto {

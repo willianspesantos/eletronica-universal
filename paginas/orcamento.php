@@ -163,237 +163,165 @@
     <link rel="stylesheet" href="../src/css/_reset.css" />
     <link rel="stylesheet" href="../src/css/header.css" />
     <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="stylesheet" href="../src/css/menu.css">
     <link rel="stylesheet" href="../src/css/orcamento.css" />
+    <link rel="stylesheet" href="../src/css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
     
     <title>ORÇAMENTO - ELETRÔNICA UNIVERSAL</title>
     <script src='https://www.google.com/recaptcha/api.js?hl=pt-BR'></script>
 
   </head>
-  <body>
-    <div class="corpo">
-      <header
-        class="cabecalho header_banner d-flex flex-row justify-content-around align-items-center" id="cabecalho">
-        <h1>
-          <img src="../src/img/logoedit.png" alt="Logotipo eletronica universal" />
-          <img src="../src/img/nome.png" alt="eletronica universal" />
-        </h1>
-        <h2 id="chamada">Nossa Experiência Faz a Diferença</h2>
-        <span>+ de 50 Anos no mercado</span>
-      </header>
-      <main>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Alterna navegação"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link text-uppercase"
-                id="link-menu" href="../index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                class="nav-link text-uppercase"
-                id="link-menu"
-                href="produtos.html"
-                >Produtos</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-uppercase"
-                  id="link-menu"
-                  href="orcamento.html"
-                  >Faça seu Orçamento</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-uppercase"
-                  id="link-menu"
-                  href="sobre.html"
-                  >Sobre Nós</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div
-            class="d-flex flex-row bd-highlight mt-1 mb-2 align-items-center"
-          >
-          <a
-          class="nav-link "
-          href="https://www.facebook.com/eletronicauniversalguarapuava/"
-          target="_blank"
-        >
-          <img class="redeSocial" src="../src/img/facebook.png" alt="logo facebook" />
-        </a>
-        <a 
-        class="nav-link "
-         href="https://wa.me/5504299845335?text=Olá,%20encontrei%20seu%20contato%20no%20site%20e"
-         target="_blank"
-        >
-          <img class="redeSocial" src="../src/img/whatsapp.png" alt="logo whatsapp" />
-        </a>
-        <a class="nav-link "
-        href="https://twitter.com/intent/tweet?url=https://eletronicauniversal.com.br"
-        target="_blank"
-         >
-          <img class="redeSocial" src="../src/img/twitter.png" alt="logo twitter" />
-        </a>
-          </div>
-        </nav>
-        <div class="orcamento d-flex justify-content-between">
-          <section class="secao1">
-
-            <form class="formulario mt-3" action="orcamento.php"  method="POST">
-              <div class="sucesso-form"><?php echo $sucess_email;?></div>
-              <label for="nome">Nome:</label>
-              <input name="nome" class="campo-input" type="text" id="nome" required>
-              <div class="erro-form"><?php echo $erro_nome;?></div>
-              <label for="email">Email:</label>
-              <input name="email" class="campo-input" type="email" id="email" required>
-              <div class="erro-form"><?php echo $erro_email;?></div>
-              <label for="cidade">Cidade:</label>
-              <input name="cidade" class="campo-input" type="text" id="cidade" required>
-              <div class="erro-form"><?php echo $erro_cidade;?></div>
-              <label  for="telefone">Telefone:</label>
-              <input name="telefone" class="campo-input" type="number" id="telefone" required>
-              <div class="erro-form"><?php echo $erro_telefone;?></div>
-              <label for="textarea">Descrição:</label>
-              <textarea name="mensagem" id="textarea" cols="30" rows="7" required></textarea>
-              <div class="erro-form"><?php echo $erro_menssagem;?></div>
-              <div class="g-recaptcha" data-sitekey="6Lebny0cAAAAADxbEhiFKlRA3GEe6CWgAAXLQ1CH" required></div>
-              <input class="btn btn-primary mt-2 p-2" type="submit" value="enviar" id="botao-input" />              
-            </form>
-          </section>
-          <section class="secao2 d-flex flex-column align-items-center justify-content-around">
-            <div class="contato mt-5">
-              <h3>Fale Conosco</h3>
-              <p>Nossa equipe está aguardando seu contato!</p> 
-              <a href="tel:( 42 ) 3623-5325">
-                <img src="../src/img/c-telefone.png" alt=""> ( 42 ) 3623-5325    
-              </a>
-              <br>
-              <a href="mailto:universaleletronica2@gmail.com">
-                <img src="../src/img/email.png" alt=""> universaleletronica2@gmail.com    
-              </a>
-            </div>
-            <div class="contatoZap mt-5">
-              <h3>Deseja atendimento pelo whatsapp?</h3>
-              <p>Pode utilizar o botão abaixo, para entrar em contato diretamente com a nossa equipe de atendimento</p>
-              <button type="button" class="btn btn-success" data-botaozap>
-                <img src="../src/img/c-whatsapp.png" alt="botao entrar em contato via whatsapp">
-                WhatsApp
-              </button>
-            </div>
-            <div class="contatoEndereco mt-5">
-              <h3>Ou venha nos fazer uma visita!</h3>
-              <p>Nossa equipe qualificada terá o enorme prazer em atende-lo!</p>
-              <address class="text-center">
-               <img src="../src/img/mapa.png" alt="">
-                Rua Dr Laranjeiras nº 1014, Batel, Guarapuava - PR      
-              </address>
-            </div>          
-          </section>
-        </div>
-      </main>
-      <footer class="rodape">
-        <div
-          class="
-            d-flex
-            justify-content-between
-            align-items-center
-            mt-5
-            p-3
-            bg-dark
-            text-white
-          "
-          id="rodape"
-        >
-          <div class="rodape-imagem">
-            <img
-              src="../src/img/logoedit.png"
-              class="rodape-logo imagem-logo"
-              alt="Logotipo eletronica universal"
-            />
-            <img
-              src="../src/img/nome.png"
-              class="rodape-logo imagem-nome"
-              alt="eletronica universal"
-            />
-          </div>
-
-          <ul
-            class=" rodape-social d-flex justify-content-around align-items-center">
-          <li class="mr-3">
-            <a
-              href="https://www.facebook.com/eletronicauniversalguarapuava/"
-              class="rodape-social-link rodape-social-link--facebook"
-            >
-              <img src="../src/img/facebook-rodape.png" alt="" class="rodape-social-img"/>
-            </a>
-          </li>
-          <li class="mr-3">
-            <a
-            class="rodape-social-link rodape-social-link--twitter"
-            href="https://twitter.com/intent/tweet?url=https://eletronicauniversal.com.br"
-            target="_blank"
-            >
-              <img src="../src/img/twitter-rodape.png" alt="" class="rodape-social-img"/>
-            </a>
-          </li>
-          <li>
-            <a
-            class="rodape-social-link rodape-social-link--Whatsapp"
-            href="https://wa.me/5504299845335?text=Olá,%20encontrei%20seu%20contato%20no%20site%20e"
-            target="_blank"
-            >
-              <img src="../src/img/whatsapp-rodape.png" alt="" class="rodape-social-img"/>
-            </a>
-          </li>
+  <body class="corpo">
+  
+    <header class="cabecalho header_banner d-flex flex-row justify-content-around align-items-center" id="cabecalho">
+      <h1>
+        <img src="../src/img/logoedit.png" alt="Logotipo eletronica universal" />
+        <img src="../src/img/nome.png" alt="eletronica universal" />
+      </h1>
+      <h2 class="cabecalho__subtitulo">Nossa Experiência Faz a Diferença</h2>
+      <span>+ de 50 Anos no mercado</span>
+    </header>
+    <main>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+          aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-uppercase" id="link-menu" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase" id="link-menu" href="produtos.html">Produtos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase" id="link-menu" href="orcamento.html">Faça seu Orçamento</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase" id="link-menu" href="sobre.html">Sobre Nós</a>
+            </li>
           </ul>
-
-          <nav class="rodape-nav">
-            <ul class="d-flex justify-content-around align-items-center">
-              <li class="mr-3">
-                <a href="../index.html" class="text-white text-uppercase">home</a>
-              </li>
-              <li class="mr-3">
-                <a href="./produtos.html" class="text-white text-uppercase">produtos</a>
-              </li>
-              <li class="mr-3">
-                <a href="./orcamento.html" class="text-white text-uppercase">orçamento</a>
-              </li>
-              <li class="mr-3">
-                <a href="./sobre.html" class="text-white text-uppercase">sobre nós</a>
-              </li>
-            </ul>
-          </nav>
         </div>
-      </footer>
-    </div>
+        <div class="d-flex flex-row bd-highlight mt-1 mb-2 align-items-center">
+        <a class="nav-link" href="https://www.facebook.com/eletronicauniversalguarapuava/" target="_blank">
+        <img class="redeSocial" src="../src/img/facebook.png" alt="logo facebook" />
+      </a>
+      <a class="nav-link" href="https://wa.me/5504299845335?text=Olá,%20encontrei%20seu%20contato%20no%20site%20e" target="_blank"
+      >
+        <img class="redeSocial" src="../src/img/whatsapp.png" alt="logo whatsapp" />
+      </a>
+      <a class="nav-link" href="https://twitter.com/intent/tweet?url=https://eletronicauniversal.com.br" target="_blank">
+        <img class="redeSocial" src="../src/img/twitter.png" alt="logo twitter" />
+      </a>
+        </div>
+      </nav>
+      <div class="orcamento d-flex justify-content-between">
+        <section class="secao1">
+
+          <form class="formulario mt-3" action="orcamento.php"  method="POST">
+            <div class="sucesso-form"><?php echo $sucess_email;?></div>
+            <label for="nome">Nome:</label>
+            <input name="nome" class="campo-input" type="text" id="nome" required>
+            <div class="erro-form"><?php echo $erro_nome;?></div>
+            <label for="email">Email:</label>
+            <input name="email" class="campo-input" type="email" id="email" required>
+            <div class="erro-form"><?php echo $erro_email;?></div>
+            <label for="cidade">Cidade:</label>
+            <input name="cidade" class="campo-input" type="text" id="cidade" required>
+            <div class="erro-form"><?php echo $erro_cidade;?></div>
+            <label  for="telefone">Telefone:</label>
+            <input name="telefone" class="campo-input" type="number" id="telefone" required>
+            <div class="erro-form"><?php echo $erro_telefone;?></div>
+            <label for="textarea">Descrição:</label>
+            <textarea name="mensagem" id="textarea" cols="30" rows="7" required></textarea>
+            <div class="erro-form"><?php echo $erro_menssagem;?></div>
+            <div class="g-recaptcha" data-sitekey="6Lebny0cAAAAADxbEhiFKlRA3GEe6CWgAAXLQ1CH" required></div>
+            <input class="btn btn-primary mt-2 p-2" type="submit" value="enviar" id="botao-input" />              
+          </form>
+        </section>
+        <section class="secao2 d-flex flex-column align-items-center justify-content-around">
+          <div class="contato mt-5">
+            <h3>Fale Conosco</h3>
+            <p>Nossa equipe está aguardando seu contato!</p> 
+            <a href="tel:( 42 ) 3623-5325">
+              <img src="../src/img/c-telefone.png" alt=""> ( 42 ) 3623-5325    
+            </a>
+            <br>
+            <a href="mailto:universaleletronica2@gmail.com">
+              <img src="../src/img/email.png" alt=""> universaleletronica2@gmail.com    
+            </a>
+          </div>
+          <div class="contatoZap mt-5">
+            <h3>Deseja atendimento pelo whatsapp?</h3>
+            <p>Pode utilizar o botão abaixo, para entrar em contato diretamente com a nossa equipe de atendimento</p>
+            <button type="button" class="btn btn-success" data-botaozap>
+              <img src="../src/img/c-whatsapp.png" alt="botao entrar em contato via whatsapp">
+              WhatsApp
+            </button>
+          </div>
+          <div class="contatoEndereco mt-5">
+            <h3>Ou venha nos fazer uma visita!</h3>
+            <p>Nossa equipe qualificada terá o enorme prazer em atende-lo!</p>
+            <address class="text-center">
+              <img src="../src/img/mapa.png" alt="">
+              Rua Dr Laranjeiras nº 1014, Batel, Guarapuava - PR      
+            </address>
+          </div>          
+        </section>
+      </div>
+    </main>
+    <footer class="rodape">
+      <div class="d-flex justify-content-between align-items-center mt-5 p-3 bg-dark text-white" id="rodape">
+        <div class="rodape-imagem">
+          <img src="../src/img/logoedit.png" class="rodape-logo imagem-logo" alt="Logotipo eletronica universal" />
+          <img src="../src/img/nome.png" class="rodape-logo imagem-nome" alt="eletronica universal" />
+        </div>
+
+        <ul class=" rodape-social d-flex justify-content-around align-items-center">
+        <li class="mr-3">
+          <a href="https://www.facebook.com/eletronicauniversalguarapuava/" class="rodape-social-link rodape-social-link--facebook">
+            <img src="../src/img/facebook-rodape.png" alt="" class="rodape-social-img"/>
+          </a>
+        </li>
+        <li class="mr-3">
+          <a class="rodape-social-link rodape-social-link--twitter" href="https://twitter.com/intent/tweet?url=https://eletronicauniversal.com.br" target="_blank"
+          >
+            <img src="../src/img/twitter-rodape.png" alt="" class="rodape-social-img"/>
+          </a>
+        </li>
+        <li>
+          <a class="rodape-social-link rodape-social-link--Whatsapp" href="https://wa.me/5504299845335?text=Olá,%20encontrei%20seu%20contato%20no%20site%20e"
+          target="_blank">
+            <img src="../src/img/whatsapp-rodape.png" alt="" class="rodape-social-img"/>
+          </a>
+        </li>
+        </ul>
+
+        <nav class="rodape-nav">
+          <ul class="d-flex justify-content-around align-items-center">
+            <li class="mr-3">
+              <a href="../index.html" class="text-white text-uppercase">home</a>
+            </li>
+            <li class="mr-3">
+              <a href="./produtos.html" class="text-white text-uppercase">produtos</a>
+            </li>
+            <li class="mr-3">
+              <a href="./orcamento.html" class="text-white text-uppercase">orçamento</a>
+            </li>
+            <li class="mr-3">
+              <a href="./sobre.html" class="text-white text-uppercase">sobre nós</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    
     <script src="../src/script/index.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -410,6 +338,6 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
-    <script src="teste.js"></script>
+   
   </body>
 </html>

@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="src/css/_reset.css" />
-  <link rel="stylesheet" href="src/css/header.css" />
-  <link rel="stylesheet" href="src/css/style.css" />
-  <link rel="stylesheet" href="src/css/rodape.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="src/css/_reset.css" />
+    <link rel="stylesheet" href="src/css/header.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/menu.css">
+    <link rel="stylesheet" href="src/css/rodape.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
 
-  <title>ELETRÔNICA UNIVERSAL</title>
-</head>
+    <title>ELETRÔNICA UNIVERSAL</title>
+  </head>
 
-<body>
-  <div class="corpo">
+  <body class="corpo">
+
     <header class="cabecalho header_banner d-flex flex-row justify-content-around align-items-center" id="cabecalho">
       <h1>
         <img src="src/img/logoedit.png" alt="Logotipo eletronica universal" />
         <img src="src/img/nome.png" alt="eletronica universal" />
       </h1>
-      <h2 id="chamada">Nossa Experiência Faz a Diferença</h2>
+      <h2 class="cabecalho__subtitulo">Nossa Experiência Faz a Diferença</h2>
       <span>+ de 50 Anos no mercado</span>
     </header>
     <main>
@@ -65,7 +66,7 @@
           </a>
         </div>
       </nav>
-      <section id="carrossel">
+      <section>
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -83,18 +84,17 @@
         <p class="text-center mt-3">
           Nosso estabelecimento está localizado no coração da cidade.
         </p>
-        <div class="d-flex justify-content-around align-items-center mt-5" id="caixa-mapa">
+        <div class="d-flex justify-content-around align-items-center mt-5 caixa-mapa">
           <div class="mapa-coluna">
             <h3>Venha conhecer nossa loja!</h3>
-            <address class="text-center endereco">
+            <address class="text-center mapa-coluna__endereco">
               Rua Dr Laranjeiras, 1014 <br />
               Batel, Guarapuava - PR <br />
               <a href="tel:( 42 ) 3623-5325">
                 <img src="./src/img/c-telefone.png" alt=""> ( 42 ) 3623-5325
               </a>
 
-              <a href="https://wa.me/5504299845335?text=Olá,%20encontrei%20seu%20contato%20no%20site%20e"
-                target="_blank">
+              <a href="https://wa.me/5504299845335?text=Olá,%20encontrei%20seu%20contato%20no%20site%20e" target="_blank">
                 <img src="./src/img/c-whatsapp.png" alt=""> ( 42 ) 9 9984-5335
               </a>
             </address>
@@ -150,17 +150,17 @@
         </nav>
       </div>
     </footer>
-  </div>
-  <script src="src/script/index.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
-</body>
+    
+    <script src="src/script/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+  </body>
 
 </html>
