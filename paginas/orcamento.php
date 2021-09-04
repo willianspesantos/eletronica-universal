@@ -49,7 +49,7 @@
     }
      
    //Defino a Chave do meu site
-    $secret_key = '6Lebny0cAAAAAL0BMhtS4yECUof-GjyDKf6bWBEo'; 
+    $secret_key = '6LflYkUcAAAAAFimcaOi9sXwc2jV3kzdY6jqlk_e'; 
 
     //Pego a validação do Captcha feita pelo usuário
     $recaptcha_response = $_POST['g-recaptcha-response'];
@@ -110,7 +110,7 @@
           ]
         ];
         $mail->Username = 'josemourateste1@gmail.com';                     //SMTP username
-        $mail->Password='*************';                               //SMTP password
+        $mail->Password='300kms300kms';                               //SMTP password
         $mail->SMTPSecure = PHPMailer :: ENCRYPTION_STARTTLS;       //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
         $mail->Port       = 587;                                    //TCP port to connect to, use 465 587 for `PHPMailer::ENCRYPTION_SMTPS` above
 
@@ -166,6 +166,7 @@
     <link rel="stylesheet" href="../src/css/menu.css">
     <link rel="stylesheet" href="../src/css/orcamento.css" />
     <link rel="stylesheet" href="../src/css/footer.css">
+    <link rel="stylesheet" href="../src/css/rodape.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap" rel="stylesheet" />
@@ -241,7 +242,7 @@
             <label for="textarea">Descrição:</label>
             <textarea name="mensagem" id="textarea" cols="30" rows="7" required></textarea>
             <div class="erro-form"><?php echo $erro_menssagem;?></div>
-            <div class="g-recaptcha" data-sitekey="6Lebny0cAAAAADxbEhiFKlRA3GEe6CWgAAXLQ1CH" required></div>
+            <div class="g-recaptcha" data-sitekey="6LflYkUcAAAAADP5F-WQ21J23v45hkFLMJIyGtZd" required></div>
             <input class="btn btn-primary mt-2 p-2" type="submit" value="enviar" id="botao-input" />              
           </form>
         </section>
