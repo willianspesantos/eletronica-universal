@@ -111,7 +111,7 @@
         ];
         $mail->Username = 'contato@universaleletronica.com.br';                     //SMTP username
         $mail->Password='Primeirosite2021';                               //SMTP password
-        $mail->SMTPSecure = PHPMailer :: ENCRYPTION_STARTTLS;       //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+        $mail->SMTPSecure = TLS; //PHPMailer :: ENCRYPTION_STARTTLS;       //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
         $mail->Port = 465;                                    //TCP port to connect to, use 465 587 for `PHPMailer::ENCRYPTION_SMTPS` above
 
         //Recipients
@@ -254,8 +254,8 @@
               <img src="../src/img/c-telefone.png" alt=""> ( 42 ) 3623-5325    
             </a>
             <br>
-            <a href="mailto:universaleletronica2@gmail.com">
-              <img src="../src/img/email.png" alt=""> universaleletronica2@gmail.com    
+            <a href="mailto:contato@universaleletronica.com">
+              <img src="../src/img/email.png" alt=""> contato@universaleletronica.com    
             </a>
           </div>
           <div class="contatoZap mt-5">
