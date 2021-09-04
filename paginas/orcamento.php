@@ -100,8 +100,8 @@
         
         //$mail->SMTPDebug = 1;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host= 'smtp.hostinger.com';                     //Set the SMTP server to send through
-        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+        $mail->Host = 'smtp.gmail.com';                     //Set the SMTP server to send through
+        $mail->SMTPAuth = true;                                   //Enable SMTP authentication
         $mail -> SMTPOptions = [
           'ssl' => [
             'verify_peer' => false ,
@@ -109,14 +109,14 @@
             'allow_self_signed' => true ,
           ]
         ];
-        $mail->Username = 'contato@universaleletronica.com.br';                     //SMTP username
-        $mail->Password='Primeirosite2021';                               //SMTP password
-        $mail->SMTPSecure = TLS; //PHPMailer :: ENCRYPTION_STARTTLS;       //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-        $mail->Port = 465;                                    //TCP port to connect to, use 465 587 for `PHPMailer::ENCRYPTION_SMTPS` above
+        $mail->Username = 'josemourateste1@gmail.com';                     //SMTP username
+        $mail->Password='300kms300kms';                               //SMTP password
+        $mail->SMTPSecure = PHPMailer :: ENCRYPTION_STARTTLS;       //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+        $mail->Port = 587;                                    //TCP port to connect to, use 465 587 for `PHPMailer::ENCRYPTION_SMTPS` above
 
         //Recipients
-        $mail->setFrom('contato@universaleletronica.com.br', 'Contato pelo site(ORCAMENTO)');
-        $mail->addAddress('iniciandoprojetoscompic@gmail.com', 'destinatario');     //Add a recipient
+        $mail->setFrom('josemourateste1@gmail.com', 'Contato pelo site(ORCAMENTO)');
+        $mail->addAddress('contato@universaleletronica.com.br', 'destinatario');     //Add a recipient
         //$mail->addAddress($mensagem->__get('para'));     //Add a recipient
         $mail->addReplyTo($email1, 'Cliente');
         //$mail->addCC('cc@example.com');
@@ -254,8 +254,8 @@
               <img src="../src/img/c-telefone.png" alt=""> ( 42 ) 3623-5325    
             </a>
             <br>
-            <a href="mailto:contato@universaleletronica.com">
-              <img src="../src/img/email.png" alt=""> contato@universaleletronica.com    
+            <a href="mailto:universaleletronica2@gmail.com">
+              <img src="../src/img/email.png" alt=""> universaleletronica2@gmail.com    
             </a>
           </div>
           <div class="contatoZap mt-5">
