@@ -109,14 +109,14 @@
             'allow_self_signed' => true ,
           ]
         ];
-        $mail->Username = 'josemourateste1@gmail.com';                     //SMTP username
-        $mail->Password='300kms300kms';                               //SMTP password
+        $mail->Username = 'contatouniversaleletronica@gmail.com';                     //SMTP username
+        $mail->Password='*******';                               //SMTP password
         $mail->SMTPSecure = PHPMailer :: ENCRYPTION_STARTTLS;       //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-        $mail->Port = 587;                                    //TCP port to connect to, use 465 587 for `PHPMailer::ENCRYPTION_SMTPS` above
+        $mail->Port       = 587;                                    //TCP port to connect to, use 465 587 for `PHPMailer::ENCRYPTION_SMTPS` above
 
         //Recipients
-        $mail->setFrom('josemourateste1@gmail.com', 'Contato pelo site(ORCAMENTO)');
-        $mail->addAddress('contato@universaleletronica.com.br', 'destinatario');     //Add a recipient
+        $mail->setFrom('contatouniversaleletronica@gmail.com', 'Contato pelo site(ORCAMENTO)');
+        $mail->addAddress('universaleletronica2@gmail.com', 'destinatario');     //Add a recipient
         //$mail->addAddress($mensagem->__get('para'));     //Add a recipient
         $mail->addReplyTo($email1, 'Cliente');
         //$mail->addCC('cc@example.com');
