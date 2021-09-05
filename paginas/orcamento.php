@@ -110,7 +110,7 @@
           ]
         ];
         $mail->Username = 'contatouniversaleletronica@gmail.com';                     //SMTP username
-        $mail->Password='TuV# Rj@';                               //SMTP password
+        $mail->Password='*******';                               //SMTP password
         $mail->SMTPSecure = PHPMailer :: ENCRYPTION_STARTTLS;       //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
         $mail->Port       = 587;                                    //TCP port to connect to, use 465 587 for `PHPMailer::ENCRYPTION_SMTPS` above
 
