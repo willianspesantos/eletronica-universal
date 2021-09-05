@@ -181,6 +181,11 @@
         margin-bottom: 0px;
         padding: 1rem;
     }
+
+    .principal-sobre__portifolio___lista h3 {
+        font-size: 1.05rem;
+        margin-bottom: 0rem;
+    }
     
     .caixa-texto {
         font-size: 0.9rem;

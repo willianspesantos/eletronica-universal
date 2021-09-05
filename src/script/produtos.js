@@ -134,7 +134,7 @@ function mostrarProdutos() {
         const cardConteudo = `
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3 " ${item.id}>
         <div class="card">
-        <img class="card-img-top" src="../src/img/produtos/${item.img}.jpg" alt="Imagem de capa do card">
+        <img class="card-img-top" src="../src/img/produtos/${item.img}.jpg" alt="${item.descricao}">
         <div class="card-body">
         <p class="card-text text-center">${item.descricao}</p>
         </div>

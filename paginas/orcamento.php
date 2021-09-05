@@ -181,19 +181,18 @@
   
     <header class="cabecalho header_banner d-flex flex-row justify-content-around align-items-center" id="cabecalho">
       <h1>
-        <img src="../src/img/logoedit.png" alt="Logotipo eletronica universal" />
-        <img src="../src/img/nome.png" alt="eletronica universal" />
+        <img class="cabecalho__logo" src="../src/img/logoedit.png" alt="Logotipo" />
+        <img class="cabecalho__nome-logo" src="../src/img/nome.png" alt="eletronica universal" />
       </h1>
       <h2 class="cabecalho__subtitulo">Nossa Experiência Faz a Diferença</h2>
       <span>+ de 50 Anos no mercado</span>
     </header>
     <main>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-          aria-expanded="false" aria-label="Alterna navegação">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <section class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link text-uppercase" id="link-menu" href="../index.html">Home</a>
@@ -208,19 +207,18 @@
               <a class="nav-link text-uppercase" id="link-menu" href="sobre.html">Sobre Nós</a>
             </li>
           </ul>
-        </div>
-        <div class="d-flex flex-row bd-highlight mt-1 mb-2 align-items-center">
-        <a class="nav-link" href="https://www.facebook.com/eletronicauniversalguarapuava/" target="_blank">
-        <img class="redeSocial" src="../src/img/facebook.png" alt="logo facebook" />
-      </a>
-      <a class="nav-link" href="https://wa.me/5504299845335?text=Olá,%20encontrei%20seu%20contato%20no%20site%20e" target="_blank"
-      >
-        <img class="redeSocial" src="../src/img/whatsapp.png" alt="logo whatsapp" />
-      </a>
-      <a class="nav-link" href="https://twitter.com/intent/tweet?url=https://eletronicauniversal.com.br" target="_blank">
-        <img class="redeSocial" src="../src/img/twitter.png" alt="logo twitter" />
-      </a>
-        </div>
+        </section>
+        <section class="d-flex flex-row bd-highlight mt-1 mb-2 align-items-center">
+          <a class="nav-link" href="https://www.facebook.com/eletronicauniversalguarapuava/" target="_blank">
+            <img class="redeSocial" src="../src/img/facebook.png" alt="facebook" />
+          </a>
+          <a class="nav-link" href="https://wa.me/5504299845335?text=Olá,%20encontrei%20seu%20contato%20no%20site%20e" target="_blank">
+            <img class="redeSocial" src="../src/img/whatsapp.png" alt="whatsapp" />
+          </a>
+          <a class="nav-link" href="https://twitter.com/intent/tweet?url=https://eletronicauniversal.com.br" target="_blank">
+            <img class="redeSocial" src="../src/img/twitter.png" alt="twitter" />
+          </a>
+        </section>
       </nav>
       <div class="orcamento d-flex justify-content-between">
         <section class="secao1">
@@ -251,11 +249,11 @@
             <h3>Fale Conosco</h3>
             <p>Nossa equipe está aguardando seu contato!</p> 
             <a href="tel:( 42 ) 3623-5325">
-              <img src="../src/img/c-telefone.png" alt=""> ( 42 ) 3623-5325    
+              <img src="../src/img/c-telefone.png" alt="telefone"> ( 42 ) 3623-5325    
             </a>
             <br>
             <a href="mailto:universaleletronica2@gmail.com">
-              <img src="../src/img/email.png" alt=""> universaleletronica2@gmail.com    
+              <img src="../src/img/email.png" alt="email"> universaleletronica2@gmail.com    
             </a>
           </div>
           <div class="contatoZap mt-5">
@@ -270,7 +268,7 @@
             <h3>Ou venha nos fazer uma visita!</h3>
             <p>Nossa equipe qualificada terá o enorme prazer em atende-lo!</p>
             <address class="text-center">
-              <img src="../src/img/mapa.png" alt="">
+              <img src="../src/img/mapa.png" alt="mapa">
               Rua Dr Laranjeiras nº 1014, Batel, Guarapuava - PR      
             </address>
           </div>          
@@ -280,26 +278,26 @@
     <footer class="rodape">
       <div class="d-flex justify-content-between align-items-center mt-5 p-3 bg-dark text-white" id="rodape">
         <div class="rodape-imagem">
-          <img src="../src/img/logoedit.png" class="rodape-logo imagem-logo" alt="Logotipo eletronica universal" />
+          <img src="../src/img/logoedit.png" class="rodape-logo imagem-logo" alt="Logotipo" />
           <img src="../src/img/nome.png" class="rodape-logo imagem-nome" alt="eletronica universal" />
         </div>
 
         <ul class=" rodape-social d-flex justify-content-around align-items-center">
         <li class="mr-3">
           <a href="https://www.facebook.com/eletronicauniversalguarapuava/" class="rodape-social-link rodape-social-link--facebook">
-            <img src="../src/img/facebook-rodape.png" alt="" class="rodape-social-img"/>
+            <img src="../src/img/facebook-rodape.png" alt="facebook" class="rodape-social-img"/>
           </a>
         </li>
         <li class="mr-3">
           <a class="rodape-social-link rodape-social-link--twitter" href="https://twitter.com/intent/tweet?url=https://eletronicauniversal.com.br" target="_blank"
           >
-            <img src="../src/img/twitter-rodape.png" alt="" class="rodape-social-img"/>
+            <img src="../src/img/twitter-rodape.png" alt="twitter" class="rodape-social-img"/>
           </a>
         </li>
         <li>
           <a class="rodape-social-link rodape-social-link--Whatsapp" href="https://wa.me/5504299845335?text=Olá,%20encontrei%20seu%20contato%20no%20site%20e"
           target="_blank">
-            <img src="../src/img/whatsapp-rodape.png" alt="" class="rodape-social-img"/>
+            <img src="../src/img/whatsapp-rodape.png" alt="whatsapp" class="rodape-social-img"/>
           </a>
         </li>
         </ul>

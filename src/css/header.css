@@ -10,10 +10,6 @@
     justify-content: space-around;
 }
 
-.logo {
-    border-radius: 4rem;
-}
-
 .cabecalho__subtitulo {
     color: var(--verde-claro);
     font-family: var(--fonte-asap);
@@ -41,10 +37,18 @@
 }
 
 @media screen and (max-width:680px) {
+    .cabecalho__logo{
+        height: 70px;        
+    }
+
+    .cabecalho__nome-logo{
+        height: 60px;
+    }
+    
     .cabecalho__subtitulo {
         color: var(--verde-claro);
         font-family: var(--fonte-asap);
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .cabecalho span {

@@ -7,6 +7,10 @@
     max-width: 12.5rem;
 }
 
+.rodape-social-img {
+    border-radius: 15%;
+}
+
 @media screen and (max-width:991px) {
 
     #rodape {
