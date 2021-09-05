@@ -100,8 +100,13 @@
         
         //$mail->SMTPDebug = 1;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
+<<<<<<< Updated upstream
         $mail->Host = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth = true;                                   //Enable SMTP authentication
+=======
+        $mail->Host= 'smtp.gmail.com';                     //Set the SMTP server to send through
+        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+>>>>>>> Stashed changes
         $mail -> SMTPOptions = [
           'ssl' => [
             'verify_peer' => false ,
@@ -109,6 +114,7 @@
             'allow_self_signed' => true ,
           ]
         ];
+<<<<<<< Updated upstream
         $mail->Username = 'josemourateste1@gmail.com';                     //SMTP username
         $mail->Password='300kms300kms';                               //SMTP password
         $mail->SMTPSecure = PHPMailer :: ENCRYPTION_STARTTLS;       //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
@@ -117,6 +123,16 @@
         //Recipients
         $mail->setFrom('josemourateste1@gmail.com', 'Contato pelo site(ORCAMENTO)');
         $mail->addAddress('contato@universaleletronica.com.br', 'destinatario');     //Add a recipient
+=======
+        $mail->Username = 'contatouniversaleletronica@gmail.com';                     //SMTP username
+        $mail->Password='TuV# Rj@';                               //SMTP password
+        $mail->SMTPSecure = PHPMailer :: ENCRYPTION_STARTTLS;       //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+        $mail->Port       = 587;                                    //TCP port to connect to, use 465 587 for `PHPMailer::ENCRYPTION_SMTPS` above
+
+        //Recipients
+        $mail->setFrom('contatouniversaleletronica@gmail.com', 'Contato pelo site(ORCAMENTO)');
+        $mail->addAddress('universaleletronica2@gmail.com', 'destinatario');     //Add a recipient
+>>>>>>> Stashed changes
         //$mail->addAddress($mensagem->__get('para'));     //Add a recipient
         $mail->addReplyTo($email1, 'Cliente');
         //$mail->addCC('cc@example.com');
